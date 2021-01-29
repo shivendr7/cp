@@ -1,1 +1,1 @@
-Contains geeksforgeeks submissions
+Contains geeksforgeeks challenges
