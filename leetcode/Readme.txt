@@ -1,1 +1,1 @@
-Contains leetcode submissions
+Contains leetcode challenges
