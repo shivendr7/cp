@@ -1,4 +1,7 @@
 /*     ********Two Pointer Approach O(n)********
+
+https://www.geeksforgeeks.org/maximum-water-that-can-be-stored-between-two-buildings/
+
 Geek wants to make a special space for candies on his bookshelf. 
 Currently, it has N books of different heights and unit width. 
 Help him select 2 books such that he can store maximum candies between
