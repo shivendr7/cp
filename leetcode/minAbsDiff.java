@@ -1,4 +1,7 @@
 /*
+Not understood XD
+
+
 Given an array int a[] and a goal g.
 Find the minimum difference of goal from absolute sum of subsequences of the array.
 
