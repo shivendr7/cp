@@ -54,7 +54,7 @@ class Solution{
         
         while(!q.isEmpty()) {
             int p=q.poll();
-            if(visited.contains(p)) continue;
+            if(visited.contains(p)) continue;  //hashsets are defined by hashing functions hence their .contains() has a O(n) time complexity
             visited.add(p);
             if(p>m) {
                 q.add(p-m);
