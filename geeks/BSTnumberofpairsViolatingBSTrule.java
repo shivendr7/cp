@@ -73,6 +73,14 @@ The pair violating the BST property is: (5, 4). Hence, the result is 1.
 Note:The Input/Ouput format and Example given are used for system's internal purpose, and should be used by a user for Expected Output only. As it is a function problem, hence a user should not read any input from stdin/console. The task is to complete the function specified, and not to write the full code.
  
 */
+
+/*
+hint-
+Store the in-order traversal of the binary tree in an array. Now, 
+count the number of inversions (i.e. a[i] > a[j] and i < j) in 
+this array using Mergesort algorithm. The time complexity of this algorithm is O(nlogn).
+
+*/
 //code
 class Solution {
     /*
