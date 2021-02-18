@@ -67,25 +67,4 @@ class Solution{
     }
 };
 
-//2 pointer soln
-class Solution{
-    static boolean recreationalSpot(int[] a , int n){
-        // Your code goes here 
-        int min=a[0];
-        int max=a[0];
-        for(int i=1;i<n;i++) {
-            if(max<=a[i]) {
-                max=a[i];
-            }
-            else {
-                if(min<a[i]) {
-                    return true;
-                }
-                else {
-                    min=a[i];
-                }
-            }
-        }
-        return false;
-    }
-};
+
