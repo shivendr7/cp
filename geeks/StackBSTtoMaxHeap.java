@@ -31,6 +31,8 @@ Expected Auxiliary Space : O(n)
  
 Constraints :
 1 <= n <= 10^5
+
+Hint=Post Order Traversal of MaxHeap gives inorder traversal of BST 
 */
 //sol
 class Solution
