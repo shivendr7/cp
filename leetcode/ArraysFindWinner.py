@@ -47,3 +47,50 @@ class Solution:
             current = (current+k-1)%(n-j)
             friends.pop(current)
         return friends[0]
+#//mine  JAVA
+class Solution {
+    public int findTheWinner(int n, int k) {
+        Node P=null;
+        Node head=null;
+        for(int i=1;i<=n;i++) {
+            Node N=new Node(i);
+            if(P!=null) {
+                P.n=N;
+                N.p=P;
+            }
+            else {
+                head=N;
+            }
+            P=N;
+        }
+        P.n=head;
+        head.p=P;
+        
+        Node C=head;
+        for(int i=1;i<=n;i++) {
+            System.out.print(C.d+" ");
+            C=C.n;
+        }
+        while(C!=C.n) {
+            for(int i=0;i<k-1;i++) {
+                C=C.n;
+            }
+            C.p.n=C.n;
+            C.n.p=C.p;
+            System.out.println("     "+C.d);
+            C=C.n;
+            
+        }
+        return C.d;
+    }
+}
+class Node {
+    Node p;
+    Node n;
+    int d;
+    Node(int x) {
+        p=null;
+        n=null;
+        d=x;
+    }
+}
