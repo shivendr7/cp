@@ -1,5 +1,6 @@
 /*
 link-https://practice.geeksforgeeks.org/problems/possible-groups2013/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=2&query=category[]Arraysdifficulty[]1page2category[]Arrays#
+similar question=https://practice.geeksforgeeks.org/problems/number-of-pairs3422/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=3&query=category[]Arraysdifficulty[]1page3category[]Arrays#
 
 Given an array of positive integers of size N, form groups of two or three such that the sum of all elements in a group is a multiple of 3. Count all possible number of groups that can be generated in this way.
 
