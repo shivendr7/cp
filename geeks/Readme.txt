@@ -5,3 +5,5 @@ A good BFS problem: https://practice.geeksforgeeks.org/problems/steps-by-knight5
 Must look hint: https://practice.geeksforgeeks.org/problems/mr-modulo-and-pairs5610/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=3&query=category[]Arraysdifficulty[]1page3category[]Arrays
 
 DP distinct occurances-https://practice.geeksforgeeks.org/problems/distinct-occurrences/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=1&query=category[]Dynamic%20Programmingdifficulty[]1page1category[]Dynamic%20Programming#
+
+https://practice.geeksforgeeks.org/problems/mobile-numeric-keypad5456/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming#
