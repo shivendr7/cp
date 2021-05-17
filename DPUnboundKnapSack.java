@@ -1,4 +1,6 @@
 /*
+link-https://practice.geeksforgeeks.org/problems/min-coin5549/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming
+
 Given a list of coins of distinct denominations and total amount of money. Find the minimum number of coins required to make up that amount. Output -1 if that money cannot be made up using given coins.
 You may assume that there are infinite numbers of coins of each type.
  
