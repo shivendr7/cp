@@ -9,3 +9,5 @@ DP distinct occurances-https://practice.geeksforgeeks.org/problems/distinct-occu
 https://practice.geeksforgeeks.org/problems/mobile-numeric-keypad5456/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming#
 
 https://practice.geeksforgeeks.org/problems/two-water-jug-problem3402/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming
+
+https://practice.geeksforgeeks.org/problems/probability-of-knight5529/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming#
