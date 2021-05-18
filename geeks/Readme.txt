@@ -7,3 +7,5 @@ Must look hint: https://practice.geeksforgeeks.org/problems/mr-modulo-and-pairs5
 DP distinct occurances-https://practice.geeksforgeeks.org/problems/distinct-occurrences/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=1&query=category[]Dynamic%20Programmingdifficulty[]1page1category[]Dynamic%20Programming#
 
 https://practice.geeksforgeeks.org/problems/mobile-numeric-keypad5456/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming#
+
+https://practice.geeksforgeeks.org/problems/two-water-jug-problem3402/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming
