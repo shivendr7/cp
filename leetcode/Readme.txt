@@ -6,4 +6,8 @@ https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/  (n)
 https://leetcode.com/problems/binary-tree-cameras/
 https://leetcode.com/problems/find-duplicate-file-in-system/
 
+hard:
+https://leetcode.com/problems/find-the-shortest-superstring/solution/    <--dp
+
+
 Some-InterviewTips: https://leetcode.com/problems/triangle/solution/
