@@ -52,7 +52,7 @@ class Solution:
         for i in range(n):
             if gallery[i]>-1:
                 sprinklers.append( [i-gallery[i] , i+gallery[i]] );
-        sprinklers.sort()
+        sprinklers.sort()  #will compare sprinklers[i][0] first; if same then goes to sprinklers[i][1]
         target=0
         sprinklers_on=0
         i=0
