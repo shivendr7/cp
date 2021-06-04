@@ -24,7 +24,7 @@ Expected Auxiliary Space: O(N)
 Constraints:
 1 ≤ N ≤ 105
 */
-//sol
+//sol  fibbo series
 class Solution {
     long countStrings(int n) {
         // code here
