@@ -47,6 +47,7 @@ class Solution
        //code here..
         int dp[]=new int[n+1];
         dp[0]=1;
+        //coin loop inside sum loop suggests for how many times a coin can be used in a sum
         for(int i=1;i<=n;i++) {
             for(int j=0;j<m;j++) {
                 if(i>=arr[j])
