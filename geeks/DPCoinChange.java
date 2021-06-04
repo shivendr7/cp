@@ -44,7 +44,7 @@ class Solution
         //code here.
         long dp[]=new long[n+1];
         dp[0]=1;
-        //coin loop inside sum loop suggests for how many sums a coin can be used
+        //sum loop inside coin loop suggests for how many sums a coin can be used
         for(int i=0;i<m;i++) {
             for(int j=S[i];j<=n;j++) {
                 dp[j]+=dp[j-S[i]];
