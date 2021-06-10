@@ -34,7 +34,7 @@ Expected Auxiliary Space: O(|S|2)
 Constraints:
 1 ≤ |S| ≤ 40
 */
-//sol
+//sol pretty straight forward
 class Solution{
     int findMinInsertions(String S){
         // code here
@@ -55,3 +55,48 @@ class Solution{
         return dp[0][n-1];
     }
 }
+
+
+// Another solution can also be thought by " No. length of string - [ length of longest palindromic subsequence ] "
+// Calculating Longest Palindromic subsequence also has two approches
+
+// the straight forward  using GAP method
+        int n=S.length();
+        int dp[][]=new int[n][n];
+        for(int g=0;g<=n;g++) {
+            for(int i=0;i<n-g;i++) {
+                int j=i+g;
+                if(g==0) dp[i][j]=1;
+                else {
+                    if(S.charAt(i)==S.charAt(j)) {
+                        dp[i][j]=dp[i+1][j-1]+2;
+                    }
+                    else {
+                        dp[i][j]=Math.max(dp[i+1][j], dp[i][j-1]);
+                    }
+                }
+            }
+        }
+
+// using LCS Longest Common Subsequence
+// Longest palindromic subsequence = length of string - (LCS(str, rev_str))
+        int n=S.length();
+        int dp[][]=new int[n+1][n+1];
+        for(int i=0;i<=n;i++)
+        {
+            for(int j=0;j<=n;j++)
+            {
+                if(i==0 || j==0)
+                dp[i][j]=0;
+                else
+                {
+                    if(S.charAt(i-1)==S.charAt(n-j))
+                    {
+                        dp[i][j]=1+dp[i-1][j-1];
+                    }
+                    else
+                    dp[i][j]=Math.max(dp[i-1][j],dp[i][j-1]);
+                }
+            }
+        }
+        return dp[n][n];
