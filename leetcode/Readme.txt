@@ -8,6 +8,7 @@ https://leetcode.com/problems/find-duplicate-file-in-system/
 
 hard:
 https://leetcode.com/problems/find-the-shortest-superstring/solution/    <--dp
+https://leetcode.com/problems/jump-game-vi/discuss/1260843/C%2B%2BJavaPython-DP-and-Decreasing-Deque-Clean-and-Concise-Time-O(N)-Space-O(K)  <--dq + dp
 
 
 Some-InterviewTips: https://leetcode.com/problems/triangle/solution/
