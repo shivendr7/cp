@@ -1,4 +1,5 @@
 """
+https://leetcode.com/problems/stone-game-vii/
 https://www.youtube.com/watch?v=OETxKEIi1Gw&list=PLEvw47Ps6OBCOkEO2QrbywrfEIZ0J30N3&index=7
 
 Alice and Bob take turns playing a game, with Alice starting first.
