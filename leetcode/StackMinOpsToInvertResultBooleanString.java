@@ -113,3 +113,79 @@ class Solution {
         }
     }
 }
+//sol2
+/*
+Source
+https://binarysearch.com/problems/Toggle-Bitwise-Expression/solutions/3183446
+*/
+class Solution {
+    private static final class Tree {
+        private char op = ' ';
+        private int val = -1;
+        private Tree left, right;
+        public Tree(char op) {
+            this.op = op;
+        }
+        public Tree(int val) {
+            this.val = val;
+        }
+    }
+
+    private int idx = -1;
+    public int minOperationsToFlip(String s) {
+        idx = 0;
+        Stack<Tree> stack = new Stack<>();
+        build(s, stack);
+        final Tree ROOT = stack.pop();
+        int[] res = dfs(ROOT);
+        return Math.abs(res[0] - res[1]);
+    }
+
+    private int[] dfs(Tree node) {
+        if (node.val != -1) {
+            return new int[] {node.val, 1 ^ node.val};
+        }
+        int[] left = dfs(node.left);
+        int[] right = dfs(node.right);
+        if (node.op == '&') {
+            int zero = Math.min(left[0], right[0]);
+            int one = Math.min(left[1] + right[1], 1 + Math.min(left[1], right[1]));
+            return new int[] {zero, one};
+        } else {
+            int zero = Math.min(left[0] + right[0], 1 + Math.min(left[0], right[0]));
+            int one = Math.min(left[1], right[1]);
+            return new int[] {zero, one};
+        }
+    }
+
+    private void build(String s, Stack<Tree> stack) {
+        if (idx == s.length())
+            return;
+        final char ch = s.charAt(idx);
+        if (ch == '0' || ch == '1') {
+            idx++;
+            final Tree node = new Tree(ch - '0');
+            if (stack.isEmpty())
+                stack.push(node);
+            else
+                stack.peek().right = node;
+        } else if (ch == '(') {
+            idx++;
+            Stack<Tree> tmp = new Stack<>();
+            build(s, tmp);
+            if (stack.isEmpty())
+                stack.push(tmp.pop());
+            else
+                stack.peek().right = tmp.pop();
+            idx++;
+        } else if (ch == ')') {
+            return;
+        } else {
+            final Tree node = new Tree(ch);
+            node.left = stack.pop();
+            stack.push(node);
+            idx++;
+        }
+        build(s, stack);
+    }
+}
