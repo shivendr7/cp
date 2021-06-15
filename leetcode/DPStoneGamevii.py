@@ -4,11 +4,14 @@ https://www.youtube.com/watch?v=OETxKEIi1Gw&list=PLEvw47Ps6OBCOkEO2QrbywrfEIZ0J3
 
 Alice and Bob take turns playing a game, with Alice starting first.
 
-There are n stones arranged in a row. On each player's turn, they can remove either the leftmost stone or the rightmost stone from the row and receive points equal to the sum of the remaining stones' values in the row. The winner is the one with the higher score when there are no stones left to remove.
+There are n stones arranged in a row. On each player's turn, they can remove either the leftmost stone or the rightmost stone from the row and receive points
+equal to the sum of the remaining stones' values in the row. The winner is the one with the higher score when there are no stones left to remove.
 
-Bob found that he will always lose this game (poor Bob, he always loses), so he decided to minimize the score's difference. Alice's goal is to maximize the difference in the score.
+Bob found that he will always lose this game (poor Bob, he always loses), so he decided to minimize the score's difference. Alice's goal is to maximize the
+difference in the score.
 
-Given an array of integers stones where stones[i] represents the value of the ith stone from the left, return the difference in Alice and Bob's score if they both play optimally.
+Given an array of integers stones where stones[i] represents the value of the ith stone from the left, return the difference in Alice and Bob's score if
+they both play optimally.
 
  
 
@@ -37,15 +40,21 @@ n == stones.length
 """
 """
 Idea:
-Like most of the Stone Game problems, this one boils down to a system of ever-repeating subproblems, as the there are many different ways to get to the same board condition as we move towards the end of the game. This naturally points to a dynamic programming (DP) solution.
+Like most of the Stone Game problems, this one boils down to a system of ever-repeating subproblems, as the there are many different ways to get to the same board
+condition as we move towards the end of the game. This naturally points to a dynamic programming (DP) solution.
 
-In order to represent the different board positions, we'd normally build an N * N DP matrix where N is the length of the stones array (S). In this DP array, dp[i][j] would represent the best score difference with i representing the leftmost remaining stone's index and j representing the rightmost remaining stone's index.
+In order to represent the different board positions, we'd normally build an N * N DP matrix where N is the length of the stones array (S). In this DP array, dp[i][j]
+would represent the best score difference with i representing the leftmost remaining stone's index and j representing the rightmost remaining stone's index.
 
-Since we're using a top-down DP approach, we'll start at i = N - 2 and iterate backwards and start each nested for loop at j = i + 1. This ensures that we're building the pyramid of DP results downward, always starting each row with i and j next to each other.
+Since we're using a top-down DP approach, we'll start at i = N - 2 and iterate backwards and start each nested for loop at j = i + 1. This ensures that we're 
+building the pyramid of DP results downward, always starting each row with i and j next to each other.
 
-For each row, we'll keep track of the sum total of the stones in the range [i,j] by adding S[j] at each iteration of j. Then, we can represent the current player's ideal play by choosing the best value between picking the stone at i (total - S[i]) and picking the stone at j (total - S[j]). For each option, we have to also subtract the best value that the other player will get from the resulting board position (dp[i+1][j] or dp[i][j-1]).
+For each row, we'll keep track of the sum total of the stones in the range [i,j] by adding S[j] at each iteration of j. Then, we can represent the current player's
+ideal play by choosing the best value between picking the stone at i (total - S[i]) and picking the stone at j (total - S[j]). For each option, we have to also subtract
+the best value that the other player will get from the resulting board position (dp[i+1][j] or dp[i][j-1]).
 
-Since we will only be building off the current and previously-finished rows, however, we can actually eliminate the DP matrix and instead just define two N-length arrays representing the current and previous rows (dpCurr, dpLast), and swap between them at each iteration of i. This will drop the space complexity from O(N^2) to O(N).
+Since we will only be building off the current and previously-finished rows, however, we can actually eliminate the DP matrix and instead just define two N-length
+arrays representing the current and previous rows (dpCurr, dpLast), and swap between them at each iteration of i. This will drop the space complexity from O(N^2) to O(N).
 
 At the end, the solution will be the value stored in the DP array representing the board position with all stones present. We should therefore return dpCurr[N-1].
 
