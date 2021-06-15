@@ -2,6 +2,9 @@
 Comments needed to be seen
 link-https://practice.geeksforgeeks.org/problems/player-with-max-score/1/
 variant- DPstonegamevii.py in the leetcode folder
+https://uploads.disquscdn.com/images/0c34568e3ca545fa40b68facf0fb7c5fd4f40656c7b0c9175c239d8f82c22fa0.png
+https://uploads.disquscdn.com/images/aa8f735c609add718ead5c1a300736cc00beef5672bc6b20e2379a5a31447506.png
+https://uploads.disquscdn.com/images/f00a857d8e5718f41bace0fab2566ccf2e9362c4c374982caeb819a0ccf32526.png
 
 Given an array arr of non-negative integers of size N, 2 players are playing a game. In each move, a player chooses an element from either end of the array, and the size of the array shrinks by one. Both players take alternate chances and the game continues until the size of the array becomes 0. Every time a player chooses an array element the array value is added to the player's score. At the end player with maximum score wins.
 You have to predict whether player 1 will win the game or not. Both players will play optimally.
