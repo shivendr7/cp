@@ -1,4 +1,6 @@
 /*
+https://practice.geeksforgeeks.org/problems/partition-array-to-k-subsets/1
+
 Given an integer array a[ ] of N elements and an integer K, the task is to check if the array a[ ] could be divided into K non-empty subsets with equal sum of elements.
 Note: All elements of this array should be part of exactly one partition.
 
