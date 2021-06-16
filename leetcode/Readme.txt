@@ -12,3 +12,6 @@ https://leetcode.com/problems/jump-game-vi/discuss/1260843/C%2B%2BJavaPython-DP-
 
 
 Some-InterviewTips: https://leetcode.com/problems/triangle/solution/
+
+Subset partition
+https://github.com/shivendr7/cp/blob/main/geeks/DPPartitionIntoKsubsetsWithEqualSum.java
