@@ -1,3 +1,6 @@
+good 4type of dp use:
+https://leetcode.com/problems/k-inverse-pairs-array/solution/
+
 Contains leetcode challenges
 must try:
 https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/   (hard)
