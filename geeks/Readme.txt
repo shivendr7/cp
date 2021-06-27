@@ -13,5 +13,6 @@ https://practice.geeksforgeeks.org/problems/two-water-jug-problem3402/1/
 https://practice.geeksforgeeks.org/problems/probability-of-knight5529/1/
 
 Comments **  https://practice.geeksforgeeks.org/problems/lucky-alive-person-in-a-circle1229/1/
+(origin) https://www.cdn.geeksforgeeks.org/josephus-problem-set-1-a-on-solution/
 
 
