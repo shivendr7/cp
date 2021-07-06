@@ -1,5 +1,5 @@
 """
-https://practice.geeksforgeeks.org/problems/element-appearing-once2552/1/
+https://practice.geeksforgeeks.org/problems/the-painters-partition-problem1535/1#
 https://www.youtube.com/watch?v=2JSQIhPcHQg
 
 Dilpreet wants to paint his dog's home that has n boards with different lengths. The length of ith board is given by arr[i] where arr[] is an array of n integers. He hired k painters for this work and each painter takes 1 unit time to paint 1 unit of the board. 
