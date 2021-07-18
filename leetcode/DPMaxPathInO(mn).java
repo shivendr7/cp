@@ -73,3 +73,37 @@ class Solution {
         return ret;
     }
 };
+//prefix suffix way
+class Solution {
+    public long maxPoints(int[][] points) {
+        int n = points.length, m = points[0].length;
+        long[] dp = new long[m];
+        for(int i = 0;i < m;i++)dp[i] = points[0][i];
+        
+        for(int i = 1;i < n;i++){
+            long[] pre = new long[m];
+            Arrays.fill(pre, Long.MIN_VALUE/2);
+            for(int j = 0;j < m;j++){
+                if(j > 0){
+                    pre[j] = Math.max(pre[j], pre[j-1] - 1);
+                }
+                pre[j] = Math.max(pre[j], dp[j]);
+            }
+            long[] suf = new long[m];
+            Arrays.fill(suf, Long.MIN_VALUE/2);
+            for(int j = m-1;j >= 0;j--){
+                if(j+1  < m){
+                    suf[j] = Math.max(suf[j], suf[j+1]- 1);
+                }
+                suf[j] = Math.max(suf[j], dp[j]);
+            }
+            for(int j = 0;j < m;j++){
+                pre[j] = Math.max(pre[j], suf[j]) + points[i][j];
+            }
+            dp = pre;
+        }
+        long ans = Long.MIN_VALUE;
+        for(long v : dp)ans = Math.max(ans, v);
+        return ans;
+    }
+}
