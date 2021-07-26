@@ -40,3 +40,6 @@ class Solution {
         return c;
     }
 }
+/*
+A hard variation: https://github.com/shivendr7/cp/blob/main/leetcode/BitManipulationDPCountNonNegativeNumbersWithNoAlternateOnes.py
+*/
