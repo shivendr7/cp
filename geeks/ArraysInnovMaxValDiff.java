@@ -1,4 +1,6 @@
 /*
+https://practice.geeksforgeeks.org/problems/a-difference-of-values-and-indexes0302/1/
+
 Given an array arr[] of N positive integers. Find maximum value of |arr[i] – arr[j]| + |i – j|, (0 <= i, j <= N – 1)
 
  
