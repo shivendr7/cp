@@ -1,4 +1,6 @@
 """
+https://leetcode.com/problems/remove-boxes/
+
 Reduce an array of size N to an array of size K using following operation.
 In each reduction, two consecutive array elements are added to form a new element in their place.
 
