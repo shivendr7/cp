@@ -81,3 +81,48 @@ class solution {
        }
 };
      
+//java code
+class Solution
+{
+    
+    ArrayList<Integer> search(String pat, String txt)
+    {
+        // your code here
+        int m=pat.length(), n=txt.length();
+        int lcs[]=new int[m+1];
+        
+        int i=1, j=0;
+        while(i<m) {
+            if(txt.charAt(i)==txt.charAt(j)) 
+                lcs[i]=++j;
+            else 
+                j=0;
+            i++;
+        }
+        
+        ArrayList<Integer> ans=new ArrayList<>();
+        i=0; j=0;
+        while(i<n) {
+            if(txt.charAt(i)==pat.charAt(j)) {
+                i++;
+                j++;
+                if(j==m) {
+                    ans.add(i-j+1);
+                    j=lcs[j-1];
+                }
+            }
+            else {
+                if(j==0) 
+                    i++;
+                else
+                    j=lcs[j-1];
+            }
+        }
+        
+        if(ans.size()==0) {
+            ans.add(-1);
+            return ans;
+        }
+        return ans;
+    }
+}
