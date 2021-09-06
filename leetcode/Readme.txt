@@ -19,3 +19,9 @@ Some-InterviewTips: https://leetcode.com/problems/triangle/solution/
 
 Subset partition
 https://github.com/shivendr7/cp/blob/main/geeks/DPPartitionIntoKsubsetsWithEqualSum.java
+
+Enclosing Points in 2d( Jarvis Algo, Grahaam Scan, Monotone Chain)
+https://leetcode.com/problems/erect-the-fence/   
+        
+    
+
