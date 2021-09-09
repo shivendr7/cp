@@ -143,6 +143,29 @@ Constraints:
 -105<=A[i]<=105
 */
 //sol
+/*
+class Solution{
+    int longSubarrWthSumDivByK(int a[], int n, int k)
+    {
+        // Complete the function
+        if(k==1) return n;
+       HashMap<Integer, Integer> map=new HashMap();
+       int cs=0;
+       int max=0;
+       for(int i=0;i<n;i++) {
+           cs+=a[i];
+           System.out.println(i+" "+cs+" "+cs%k+" "+ map.get(cs%k));
+           if(map.get(cs%k)==null) {
+               map.put(cs%k, i);
+           }
+           else {
+               max=Math.max(i-map.get(cs%k), max);
+           }
+       }
+       return max;
+    }
+}
+*/
 class Solution:
 	#def longSubarrWthSumDivByK (self,arr,  n, K) : 
 		#Complete the function
