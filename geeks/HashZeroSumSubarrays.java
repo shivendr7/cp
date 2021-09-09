@@ -107,3 +107,53 @@ class Solution {
         return ans;
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/longest-subarray-with-sum-divisible-by-k1259/1/
+
+Given an array containing N integers and a positive integer K, find the length of the longest sub array with sum of the elements divisible by the given value K.
+
+Example 1:
+
+Input:
+A[] = {2, 7, 6, 1, 4, 5}
+K = 3
+Output: 4
+Explanation:The subarray is {7, 6, 1, 4}
+with sum 18, which is divisible by 3.
+Example 2:
+
+Input:
+A[] = {-2, 2, -5, 12, -11, -1, 7}
+K = 3
+Output: 5
+Explanation:
+The subarray is {2,-5,12,-11,-1} with
+sum -3, which is divisible by 3.
+ 
+
+Your Task:
+The input is already taken care of by the driver code. You only need to complete the function longSubarrWthSumDivByK() that takes an array (arr), sizeOfArray (n), positive integer K, and return the length of the longest subarray which has sum divisible by K. The driver code takes care of the printing.
+
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(N).â€‹
+
+Constraints:
+1<=N,K<=106
+-105<=A[i]<=105
+*/
+//sol
+class Solution:
+	#def longSubarrWthSumDivByK (self,arr,  n, K) : 
+		#Complete the function
+    def longSubarrWthSumDivByK(self, A, N, K):
+        maxLen = preSum = 0
+        mods = [-1] + [-2]*K
+        
+        for i in range(N):
+            preSum = (preSum + A[i]) % K
+            preSum += K if preSum<0 else 0
+            if (mods[preSum] != -2):
+                maxLen = max(i - mods[preSum], maxLen)
+            else: mods[preSum] = i
+        return maxLen
