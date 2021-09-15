@@ -32,3 +32,22 @@ Your Task:
 You don't need to take input. Just complete the function LISS() that takes the root node as a parameter and returns the largest independent set.
 */
 //sol
+class Solution {
+    int c;
+    public boolean trav(Node root) {
+        if(root==null) return false;
+        boolean l=trav(root.left);
+        boolean r=trav(root.right);
+        if(!l&&!r) {
+            c++;
+            return true;
+        }
+        return false;
+    }
+    public int LISS(Node node){
+        //Write your code here  
+        c=0;
+        boolean d=trav(node);
+        return c;
+    }
+}
