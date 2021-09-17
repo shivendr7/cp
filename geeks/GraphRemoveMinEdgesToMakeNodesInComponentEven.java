@@ -1,7 +1,8 @@
 /*
 https://practice.geeksforgeeks.org/problems/divisibility-tree1902/1/
 
-Given a tree with n nodes and edge connection between them . The tree is rooted at node 1. Your task is to remove minimum number of edges from the given tree such that the tree converts into disjoint union tree so that nodes of connected component left is divisible by 2.
+Given a tree with n nodes and edge connection between them . The tree is rooted at node 1. Your task is to remove minimum 
+number of edges from the given tree such that the tree converts into disjoint union tree so that nodes of connected component left is divisible by 2.
  
 
 Example 1:
