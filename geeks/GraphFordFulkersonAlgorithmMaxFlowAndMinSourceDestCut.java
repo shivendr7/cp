@@ -1,7 +1,13 @@
 /*
 https://practice.geeksforgeeks.org/problems/find-minimum-s-t-cut-in-a-flow-network2902/1/
 
-Given a weighted graph of N vertices numbered from 0 to N-1 in the form of adjacency matrix A[ ][ ] and two integers S denoting the number of source vertex and T denoting the number of sink vertex. The task is to find minimum capacity s-t cut of the given network. An s-t cut is a cut that requires the source node ‘S’ and the sink node ‘T’ to be in different subsets, and it consists of edges going from the source’s side to the sink’s side. The capacity of an s-t cut is defined by the sum of the capacity of each edge in the cut-set. In other words, you have to find out all the edges which has to be removed to make it impossible to reach the sink node from source node, and the edges you select should have a minimum sum of weights. You have to return all the edges included in the minimum capacity s-t cut and if there are no edges in minimum capacity s-t cut, return "-1".
+Given a weighted graph of N vertices numbered from 0 to N-1 in the form of adjacency matrix A[ ][ ] and two integers S denoting the number 
+of source vertex and T denoting the number of sink vertex. The task is to find minimum capacity s-t cut of the given network. 
+An s-t cut is a cut that requires the source node ‘S’ and the sink node ‘T’ to be in different subsets, and it consists of edges
+going from the source’s side to the sink’s side. The capacity of an s-t cut is defined by the sum of the capacity of each edge in
+the cut-set. In other words, you have to find out all the edges which has to be removed to make it impossible to reach the sink node
+from source node, and the edges you select should have a minimum sum of weights. You have to return all the edges included in 
+the minimum capacity s-t cut and if there are no edges in minimum capacity s-t cut, return "-1".
 
 Example 1:
 
