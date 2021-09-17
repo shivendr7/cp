@@ -4,7 +4,8 @@ https://practice.geeksforgeeks.org/problems/critical-connections/1/
 
 Given an undirected Connected graph of V vertices and E edges.
 A critical connection is an edge that, if removed, will make some nodes unable to reach some other nodes. Find all critical connections in the graph.
-Note: There are many possible orders for the answer. You are supposed to print the edges in sorted order, and also an edge should be in sorted order too. So if there's an edge between node 1 and 2, you should print it like (1,2) and not (2,1).
+Note: There are many possible orders for the answer. You are supposed to print the edges in sorted order, and also an edge should be in sorted order 
+too. So if there's an edge between node 1 and 2, you should print it like (1,2) and not (2,1).
 
 
 Example 1:
