@@ -23,6 +23,7 @@ For more description on this problem see wiki page
 //  Therefore for given n=1 egg for k floors, we directly take the worst case as k trials
 //  Idea: find the minimum number of worst cases
 
+// O(NK2) approach
 class Solution 
 {
     //Function to find minimum number of attempts needed in 
@@ -56,3 +57,5 @@ class Solution
 	
 	}
 }
+
+// O(NlogK) APproach=> https://leetcode.com/problems/super-egg-drop/solution/
