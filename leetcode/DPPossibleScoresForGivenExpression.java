@@ -109,3 +109,36 @@ class Solution {
         return sum;
     }
 }
+
+/*
+
+class Solution:
+    def scoreOfStudents(self, s: str, answers: List[int]) -> int:
+        gold = eval(s)
+        
+        @functools.lru_cache(None)
+        def get_all_poss(p0=0, p1=len(s)-1) :
+            if p0 == p1 :
+                return set([int(s[p0])])
+            to_ret = set()
+            for p_sign in range(p0+1, p1, 2) :
+                v1 = get_all_poss(p0, p_sign-1)
+                v2 = get_all_poss(p_sign+1, p1)
+                for a in v1 :
+                    for b in v2 :
+                        to_add = a+b if s[p_sign] == '+' else a*b
+                        if to_add <= 1000 :
+                            to_ret.add(to_add) 
+            # print(p0, p1, to_ret)
+            return to_ret
+        
+        pos = get_all_poss()
+        to_ret = 0
+        for at in answers :
+            if at == gold :
+                to_ret += 5
+            elif at in pos :
+                to_ret += 2
+        return to_ret
+
+*/
