@@ -57,3 +57,58 @@ class Solution {
         return max;
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/palindromic-strings2555/1/
+
+Given string s and an integer, you have to transform s into a palindrome. In order to achieve that you have to perform exactly k insertion of characters(you cannot perform anymore or less number of insertions). The task is to check if the string can be converted to a palindrome by making exactly k insertions.
+
+Example 1:
+
+Input: s = "abac", K = 2
+Output: 1
+Explanation: "abac" can be transformed to 
+"cabbac" (which is palindrome) adding 
+two characters c and b.
+Example 2:
+Input: s = "abcde", K = 3
+Output: 0
+Explanation: "abcde" cannot be transformed
+to palindrome using 3 insertions.
+
+Your Task:  
+You don't need to read input or print anything. Complete the function isPossiblePalindrome() which takes s and K as input parameters and returns a boolean value
+
+Expected Time Complexity: O(|s|2)
+Expected Auxiliary Space: O(|s|2)
+
+Constraints:
+1 ≤ |s| ≤ 103
+s contains lower case English alphabets
+
+*/
+//sol
+class Solution{
+
+	public int isPossiblePalindrome(String s,int k) 
+	{ 
+	    //LCS Var.
+	    int n=s.length();
+	    int dp[][]=new int[n+1][n+1];
+	    for(int i=1;i<=n;i++) {
+	        for(int j=1;j<=n;j++) {
+	            if(s.charAt(i-1)==s.charAt(n-j)) {
+	                dp[i][j]=dp[i-1][j-1]+1;
+	            }
+	            else {
+	                dp[i][j]=Math.max(dp[i-1][j], dp[i][j-1]);
+	            }
+	        }
+	    }
+	    
+	    if(n-dp[n][n]<=k) {
+	        return 1;
+	    } 
+	    return 0;
+	} 
+}
