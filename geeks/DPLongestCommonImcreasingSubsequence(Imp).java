@@ -112,3 +112,69 @@ class Solution{
 	    return 0;
 	} 
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/substring-subsequence-problem1631/1/
+
+Find the longest subsequence X of a string A which is a substring Y of a string B.
+
+Note: All letters of the Strings are Uppercased.
+
+ 
+
+Example 1:
+
+Input:
+A = "ABCD" , B = "BACDBDCD"
+Output:
+3
+Explanation:
+The answer would be 3 as because "ACD"
+is the longest subsequence of A which
+is also a substring of B.
+Example 2:
+
+Input:
+A = "A" , B = "A"
+Output:
+1
+Explanation:
+The answer would be 1 as because "A"
+is the longest subsequence of A which
+is also a substring of B. 
+ 
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function getLongestSubsequence() which takes Strings A  and B as input and returns the answer.
+
+ 
+
+Expected Time Complexity: O(|S|2)
+Expected Auxiliary Space: O(|S|2)
+
+ 
+
+Constraints:
+1 <= |A|,|B| <= 103
+*/
+//sol
+class Solution {
+    static int getLongestSubsequence(String A, String B) {
+        // code here
+        int a=A.length(), b=B.length();
+        int dp[][]=new int[a+1][b+1];
+        for(int i=1;i<=a;i++) {
+            for(int j=1;j<=b;j++) {
+                if(A.charAt(i-1)==B.charAt(j-1)) {
+                    dp[i][j]=1+dp[i-1][j-1];
+                }
+                else {
+                    dp[i][j]=dp[i-1][j];
+                }
+            }
+        }
+        int max=0;
+        for(int i=1;i<=b;i++) max=Math.max(max, dp[a][i]);
+        return max;
+    }
+};
