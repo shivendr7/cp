@@ -1,5 +1,7 @@
 /*
-Given a string S, the task is to count number of subsequences of the form aibjck, where i >= 1, j >=1 and k >= 1.
+https://practice.geeksforgeeks.org/problems/count-subsequences-of-type-ai-bj-ck4425/1/
+
+Given a string S, the task is to count number of subsequences of the form a^i.b^j.c^k, where i >= 1, j >=1 and k >= 1.
 
 Note: 
 1. Two subsequences are considered different if the set of array indexes picked for the 2 subsequences are different.
