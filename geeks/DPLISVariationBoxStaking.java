@@ -127,3 +127,55 @@ class Solution
        return(maxStackHeight(arr, n));
    }
 }
+'
+ 
+ /*
+ https://practice.geeksforgeeks.org/problems/beautiful-subsequence5222/1/
+ 
+ Nowadays Babul is solving problems on sub-sequence. He is struck with a problem in which he has to find the longest sub-sequence in an array A of size  N such that for all (i,j) where i!=j either A[i] divides A[j] or vice versa. If no such sub-sequence exists then print -1. Help him to accomplish this task.
+
+Example 1:
+
+â€‹Input : arr[ ] = {5, 3, 1, 4, 7}
+Output : 2
+Explanation:
+Longest Sub Sequence are {5,1} , {4,1}, 
+{3,1} etc. So, size is 2.
+
+Example 2:
+
+Input : arr[ ] = {2, 4, 6, 1, 3, 11} 
+Output : 3 
+
+
+Your Task:
+This is a function problem. The input is already taken care of by the driver code. You only need to complete the function longest_Subsequence() that takes an array (arr), sizeOfArray (n), and return the length of the longest subsequence of the array. The driver code takes care of the printing.
+
+Expected Time Complexity: O(N2).
+Expected Auxiliary Space: O(N).
+
+
+Constraints :
+2 ≤ N ≤ 2000
+1 ≤ A[i] ≤ 105
+ */
+ //sol
+ class Solution{
+    // Function for finding maximum and value pair
+    public static int longest_Subsequence (int arr[], int n) {
+        //Complete the function
+        Arrays.sort(arr);
+        int [] dp=new int[n];
+        Arrays.fill(dp,1);
+        for(int i=1;i<n;i++)
+            for(int j=0;j<i;j++)
+                if(arr[i]%arr[j]==0 || arr[j]%arr[i]==0)
+                    dp[i]=Integer.max(dp[i],dp[j]+1);
+        int ans=1;
+        for(int i:dp)
+            ans=Integer.max(ans,i);
+        if(ans==1)
+            ans=-1;
+        return ans;
+    }
+}
