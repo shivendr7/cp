@@ -65,3 +65,68 @@ class Solution
         return dp[0][n-1];
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/jumbled-strings0431/1/
+
+You are provided an input string S and the string “GEEKS” . Find the number of ways in which the subsequence “GEEKS” can be formed from the string S.
+ 
+Example 1:
+
+Input : S = "GEEKS"
+Output: 1
+Explanation: 
+"GEEKS" occurs in S only once.
+
+Example 2:
+
+Input: S = "AGEEKKSB"
+Output: 2
+Explanation: Subsequenece "GEEKS" occurs in 
+S two times. First one is taking the first 
+'K' into consideration and second one is 
+taking second 'K'.
+ 
+Your Task:
+You don't need to read or print anything. Your task is to complete the function TotalWays() which takes string S as input paramater and returns total ways modulo 109 + 7.
+ 
+Expected Time Complexity : O(N * K) where N is length of string and K is constant.
+Expected Space Complexity: O(N * K)
+ 
+Constraints: 
+1 <= Length od string <= 10000 
+
+*/
+//sol
+class Solution
+{
+    public int TotalWays(String str)
+    {
+        // Code here
+        String s1=str;
+        int x=str.length(), y=5;
+        String s2="GEEKS";
+        int t[][]=new int[x+1][y+1];
+        int mod=(int)1e9+7;
+        for(int j=0;j<y+1;j++) {
+            t[0][j]=0;
+        }
+        for(int i=0;i<x+1;i++) {
+            t[i][0]=1;
+        }
+           for(int i = 1 ; i < x+1 ; i++)
+           {
+               for(int j = 1 ; j < y+1 ; j++)
+               {
+                   if(s1.charAt(i-1)!=s2.charAt(j-1))
+                   {
+                       t[i][j] = t[i-1][j]%mod;
+                   }
+                   else{
+                       t[i][j] = (t[i-1][j]%mod + t[i-1][j-1]%mod)%mod;
+                   }
+               }
+           }
+           return t[x][y];
+    }
+}
