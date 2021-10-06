@@ -64,3 +64,68 @@ class Solution{
         return dp[0][n-1];
     }
 }
+
+
+/*
+https://practice.geeksforgeeks.org/problems/string-conversion4603/1/
+
+Given two strings X and Y, the task is to check if it is possible to convert X to Y by performing the following operations.
+
+ Make some lowercase letters uppercase.
+ Delete all the lowercase letters.
+Example 1:
+
+Input: X = "daBcd", Y = "ABC"
+Output: 1
+Explanation: Convert 'a' and 'c', delete
+both the d's
+Example 2:
+
+Input: X = "ABcd", Y = "BCD"
+Output: 0
+Explanation: Can not delete A
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function stringConversion() which takes the strings as input and returns 1 if it is possible to convert, otherwise 0.
+
+
+Expected Time Complexity: O(|X|*|Y|)
+Expected Auxiliary Space: O(|X|*|Y|)
+
+Constraints:
+1 ≤ |X|, |Y| ≤ 103
+*/
+//sol
+class Solution {
+    int stringConversion(String X, String Y) {
+        // code here
+        boolean dp[][]=new boolean[X.length()+1][Y.length()+1];
+        int m=X.length();
+        int n=Y.length();
+        
+        dp[0][0]=true;
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<=n;j++) {
+                if(dp[i][j]) {
+                    if(j<n && Character.toUpperCase(X.charAt(i))==Y.charAt(j)) {
+                        dp[i+1][j+1]=true;
+                    }
+                    if(X.charAt(i)>=97) {
+                        dp[i+1][j]=true;
+                    }
+                }
+            }
+        }
+        /*
+        for(int i=0;i<=m;i++) {
+            for(int j=0;j<=n;j++) {
+                System.out.print(dp[i][j]+" ");
+            }
+            System.out.println();
+        }
+        boolean ans=false;
+        for(int i=0;i<=m;i++) {
+            ans=ans||dp[i][n];
+        }*/
+        return dp[m][n]?1:0;
+    }
+}
