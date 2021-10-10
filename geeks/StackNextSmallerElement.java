@@ -60,3 +60,97 @@ class Solution {
 	    return a;
 	} 
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/mila-and-strings0435/1/
+
+Given a string S consisting of only lowercase characters. Find the lexicographically smallest string after removing k characters from the string. But you have to correct the value of k, i.e., if the length of the string is a power of 2, reduce k by half, else multiply k by 2.
+NOTE: If it is not possible to remove k (the value of k after correction) characters or if the resulting string is empty return -1.
+
+Example 1:
+
+Input: S = "fooland", k = 2
+Output: "and" 
+Explanation: As the size of the string = 7
+which is not a power of 2, hence k = 4.
+After removing 4 characters from the given 
+string, the lexicographically smallest
+string is "and".
+Example 2:
+
+Input: S = "code", k = 4
+Output: "cd"
+Explanation: As the length of the string = 4, 
+which is 2 to the power 2, hence k = 2.
+Hence, lexicographically smallest string after 
+removal of 2 characters is "cd".
+
+Your Task:  
+You dont need to read input or print anything. Complete the function lexicographicallySmallest() which takes S and k as input parameters and returns the lexicographically smallest string after removing k characters.
+
+Expected Time Complexity: O(n2)
+Expected Auxiliary Space: O(n)
+
+Constraints:
+1<= |S| <=1000
+1<= k <= 1000
+*/
+class Solution {
+    static String lexicographicallySmallest(String S, int k) {
+        // code here
+         int l=S.length();
+	     if((l & (l-1))==0){
+	         k=k/2;
+	     }
+	     else{
+	         k=2*k;
+	     }
+	     
+	     if(k>l){
+	         return "-1";
+	     }
+	     
+	     Stack<Character> stack=new Stack<Character>();
+	     
+	     int i=0;
+	     char peek,ch;
+	     while(k>0){
+	         if(stack.isEmpty()){
+	             stack.push(S.charAt(i));
+	         }
+	         else{
+	             ch=S.charAt(i);
+	             peek=stack.peek();
+	             while(k>0 && peek > ch && !stack.isEmpty()){
+	                 stack.pop();
+	                 if(!stack.isEmpty()){
+    	                 peek=stack.peek();
+    	              }
+    	             k--;
+	             }
+	             stack.push(ch);
+	         }
+	         i++;
+	         if(i==l){
+	             while(k>0){
+	                 stack.pop();
+	                 k--;
+	             }
+	         }
+	     }
+	     
+	     while(i<l){
+	         stack.push(S.charAt(i));
+	         i++;
+	     }
+	     String res="";
+	     while(!stack.isEmpty()){
+	         res=stack.pop()+res;
+	     }
+	     
+	     if(res.equals("")){
+	         return "-1";
+	     }
+	     return res;
+    }
+}
