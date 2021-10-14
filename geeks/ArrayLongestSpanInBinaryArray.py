@@ -32,7 +32,7 @@ Constraints:
 """
 #sol
 class Solution:
-	def longestCommonSum(self, arr1, arr2, n): 
+    def longestCommonSum(self, arr1, arr2, n): 
 		# code here 
 		maxLen = 0
      
