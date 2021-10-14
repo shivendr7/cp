@@ -113,3 +113,86 @@ class Solution{
 	    return dp[idx][k] = ans;
 	}
 }
+
+//subset sum var
+/*
+https://practice.geeksforgeeks.org/problems/target-sum-1626326450/1/
+
+Given an array of integers A[] of length N and an integer target.
+You want to build an expression out of A by adding one of the symbols '+' and '-' before each integer in A and then concatenate all the integers.
+
+For example, if arr = {2, 1}, you can add a '+' before 2 and a '-' before 1 and concatenate them to build the expression "+2-1".
+Return the number of different expressions that can be built, which evaluates to target.
+
+
+Example 1:
+
+Input:
+N = 5
+A[] = {1, 1, 1, 1, 1}
+target = 3
+Output:
+5
+Explanation:
+There are 5 ways to assign symbols to 
+make the sum of nums be target 3.
+-1 + 1 + 1 + 1 + 1 = 3
++1 - 1 + 1 + 1 + 1 = 3
++1 + 1 - 1 + 1 + 1 = 3
++1 + 1 + 1 - 1 + 1 = 3
++1 + 1 + 1 + 1 - 1 = 3
+
+Example 2:
+
+Input:
+N = 1
+A[] = {1}
+target = 1
+Output:
+1
+
+Your Task:
+The task is to complete the function findTargetSumWays() which finds and returns the number of different expressions that can be built.
+
+ 
+
+Expected Time Complexity: O(N*sum), where sum refers to the range of sum possible.
+Expected Auxiliary Space: O(N).
+
+ 
+
+Constraints:
+1 ≤ N ≤ 20
+0 ≤ A[i] ≤ 1000
+0 <= sum(A[i]) <= 1000
+-1000 <= target <= 1000
+*/
+//sol
+class Solution {
+    static int findTargetSumWays(int[] A, int n, int target) {
+        // code here
+        int sum=0;
+        for(int i=0;i<A.length;i++) {
+            sum+=A[i];
+        }
+        if(sum<target) return 0;
+        if((sum+target)%2==1) return 0;
+        int s=(sum+target)>>1; //subset sum
+        int dp[][]=new int[n+1][s+1];
+        //System.out.println(s);
+        for(int i=0;i<=n;i++) {
+            dp[i][0]=1;
+        }
+        for(int i=1;i<=n;i++) {
+            for(int j=1;j<=s;j++) {
+                if(j>=A[i-1]) {
+                    dp[i][j] = dp[i-1][j] + dp[i-1][j-A[i-1]];
+                }
+                else {
+                    dp[i][j] = dp[i-1][j];
+                }
+            }
+        }
+        return dp[n][s];
+    }
+};
