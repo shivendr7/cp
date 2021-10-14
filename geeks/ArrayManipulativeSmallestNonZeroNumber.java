@@ -1,5 +1,6 @@
 /*
-Given an array arr[] of the size N, the task is to find a number such that when the number is processed against each array element starting from the 0th index till the (n-1)-th index under the conditions given below, it never becomes negative.
+Given an array arr[] of the size N, the task is to find a number such that when the number is processed against each array element starting 
+from the 0th index till the (n-1)-th index under the conditions given below, it never becomes negative.
 
 If the number is greater than an array element, then it is increased by difference of the number and the array element.
 If the number is smaller than an array element, then it is decreased by difference of the number and the array element.
