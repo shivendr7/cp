@@ -28,7 +28,7 @@ Constraints:
 
 """
 """
-WA:
+WA:  TC: 6 1 3 2 4 7  Output:5 Expected:6
 class Solution:
     def maxProfit(self, p: List[int]) -> int:
         ans=0
