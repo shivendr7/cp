@@ -1,6 +1,7 @@
 /*
 https://www.youtube.com/watch?v=EcNbRjEcb14
 https://leetcode.com/problems/find-median-from-data-stream/
+https://practice.geeksforgeeks.org/problems/find-median-in-a-stream-1587115620/1/
 
 The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and the median is the mean of the two middle values.
 
