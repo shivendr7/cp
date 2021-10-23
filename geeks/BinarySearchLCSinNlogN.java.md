@@ -1,48 +1,56 @@
-/*
-https://practice.geeksforgeeks.org/problems/minimum-insertions-to-make-two-arrays-equal/1
+<h3 align="center">Minimum operations to convert array A to B</h3> 
 
+> _`Dynamic Programming` , `Array` , `Hashing`, [Problem Link](https://practice.geeksforgeeks.org/problems/minimum-insertions-to-make-two-arrays-equal/1)_
+
+#### Prob:
 Given two Arrays A[] and B[] of length N and M respectively. Find the minimum number of insertions and deletions on the array A[], required to make both the arrays identical.
-Note: Array B[] is sorted and all its elements are distinct.
 
- 
+`Note:` _Array B[] is sorted and all its elements are distinct._
 
 Example 1:
-
+```
 Input:
-N = 5, M = 3
-A[] = {1, 2, 5, 3, 1}
-B[] = {1, 3, 5}
-Output:
-4
+	N = 5, M = 3
+	A[] = {1, 2, 5, 3, 1}
+	B[] = {1, 3, 5}
+Output:	4
 Explanation:
-We need to delete 2 and replace it with 3.
-This costs 2 steps. Further, we will have to
-delete the last two elements from A to
-obtain an identical array to B. Overall, it
-results in 4 steps.
+	We need to delete 2 and replace it with 3.
+	This costs 2 steps. Further, we will have to
+	delete the last two elements from A to
+	obtain an identical array to B. Overall, it
+	results in 4 steps.
+```
+
 Example 2:
+```
 Input:
-N = 2, M = 2
-A[] = {1, 4}
-B[] = {1, 4}
+	N = 2, M = 2
+	A[] = {1, 4}
+	B[] = {1, 4}
 Output :
-0
+	0
 Explanation:
-Both the Arrays are already identical.
+	Both the Arrays are already identical.
+```
 
-Your Task:  
-You don't need to read input or print anything. Your task is to complete the function minInsAndDel() which takes two integers N and M, and two arrays A of size N and B of size M respectively as input and returns the minimum insertions and deletions required.
-
-
-Expected Time Complexity: O(NlogN)
-Expected Auxiliary Space: O(N)
+**Task:**<br>
+To complete the function `minInsAndDel()` which takes two integers N and M, and two arrays A of size N and B of size M respectively as input and returns the minimum insertions and deletions required.
 
 
-Constraints:
-1 ≤ N ≤ 105
-1 ≤ A[i], B[i] ≤ 105
-*/
-//sol
+***Expected Time Complexity: O(NlogN)<br>
+Expected Auxiliary Space: O(N)***
+
+
+**`Constraints:`**
+- 1 ≤ N ≤ 10<sup>5</sup>
+- 1 ≤ A[i], B[i] ≤ 10<sup>5</sup>
+
+<hr>
+
+> **Java Solution Code**
+
+```JAVA
 class Solution {
     
     static int minInsAndDel(int[] A, int[] B, int N, int M) {
@@ -86,66 +94,78 @@ class Solution {
        return len;
     }
 };
+```
 
-/*
-https://practice.geeksforgeeks.org/problems/count-ways-to-increase-lcs-length-of-two-strings-by-one2236/1/
+<hr>
 
-Given two strings S1 and S2 of lower alphabet characters of length N1 and N2, we need to find the number of ways to insert a character in the first 
-string S1 such that length of LCS of both strings increases by one.
+<br>
+
+<p><details>
+	<summary>Similar Problem(Click to view)</summary>
+
+<h3 align="center">Count ways to increase LCS length of two strings by one</h3>
+
+>	_`Dynamic Programming` ,  [Problem link](https://practice.geeksforgeeks.org/problems/count-ways-to-increase-lcs-length-of-two-strings-by-one2236/1/)_
+
+**Prob:** Given two strings S1 and S2 of lower alphabet characters of length N1 and N2, we need to find the number of ways to insert a character in the first string S1 such that length of LCS of both strings increases by one.
 
 Example 1:
-
+```
 Input:
-N1 = 4
-S1 = abab
-N2 = 3
-S2 = abc
+	N1 = 4
+	S1 = abab
+	N2 = 3
+	S2 = abc
 Output:
-3
+	3
 Explanation:
-LCS length of given two 
-strings is 2. There are 3 
-ways of insertion in str1,to 
-increase the LCS length by 
-one which are enumerated below, 
-str1 = “abcab” str2 = “abc” LCS length = 3 
-str1 = “abacb” str2 = “abc” LCS length = 3 
-str1 = “ababc” str2 = “abc” LCS length = 3
+	LCS length of given two 
+	strings is 2. There are 3 
+	ways of insertion in str1,to 
+	increase the LCS length by 
+	one which are enumerated below, 
+	str1 = “abcab” str2 = “abc” LCS length = 3 
+	str1 = “abacb” str2 = “abc” LCS length = 3 
+	str1 = “ababc” str2 = “abc” LCS length = 3
+```
+
 Example 2:
-
+```
 Input:
-N1 = 6
-S1 = abcabc
-N2 = 4
-S2 = abcd
+	N1 = 6
+	S1 = abcabc
+	N2 = 4
+	S2 = abcd
 Output:
-4
+	4
 Explanation:
-LCS length of given two
-strings is 3. There are 4
-ways of insertion in str1,to
-increase the LCS length by
-one which are enumerated below,
-str1 = “abcdabc” str2 = “abcd” LCS length = 4
-str1 = “abcadcb” str2 = “abcd” LCS length = 4
-str1 = “abcabdc” str2 = “abcd” LCS length = 4
-str1 = “abcabcd” str2 = “abcd” LCS length = 4
+	LCS length of given two
+	strings is 3. There are 4
+	ways of insertion in str1,to
+	increase the LCS length by
+	one which are enumerated below,
+	str1 = “abcdabc” str2 = “abcd” LCS length = 4
+	str1 = “abcadcb” str2 = “abcd” LCS length = 4
+	str1 = “abcabdc” str2 = “abcd” LCS length = 4
+	str1 = “abcabcd” str2 = “abcd” LCS length = 4
+```
 
-Your Task:
-You don't need to read input or print anything. Your task is to complete the function waysToIncreaseLCSBy1() which take string S1 and string S2 of length N1 and N2 respectively as input parameters and returns the number of ways to insert a character in the first string S1 such that length of LCS of both strings increases by one.
-
-
-Expected Time Complexity: O(N1 * N2) 
-Expected Space Complexity: O(N1 * N2)
+**Task:**<br>
+ Task is to complete the function `waysToIncreaseLCSBy1()` which take string S1 and string S2 of length N1 and N2 respectively as input parameters and `returns` the number of ways to insert a character in the first string S1 such that length of LCS of both strings increases by one.
 
 
-Constraints:
-1<= N1, N2 <=100
-S1 and S2 contains lower case English character
+***Expected Time Complexity: O(N1 \* N2)<br> 
+Expected Space Complexity: O(N1 \* N2)***
 
 
-*/
-//sol
+**Constraints:**
+-	1<= N1, N2 <=100
+-	S<sub>1</sub> and S<sub>2</sub> contains lower case English character
+
+
+> JAVA solution code
+
+```JAVA
 class Solution{
     
     static int waysToIncreaseLCSBy(int N1,String S1,int N2,String S2)
@@ -211,6 +231,7 @@ class Solution{
             }
         }
         return ans;
-    }
-        
+    }    
 }
+```
+	</details></p>
