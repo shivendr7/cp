@@ -1,7 +1,8 @@
 /*
 https://leetcode.com/problems/minimum-number-of-work-sessions-to-finish-the-tasks/
 
-There are n tasks assigned to you. The task times are represented as an integer array tasks of length n, where the ith task takes tasks[i] hours to finish. A work session is when you work for at most sessionTime consecutive hours and then take a break.
+There are n tasks assigned to you. The task times are represented as an integer array tasks of length n, where the ith task takes tasks[i] hours to finish. 
+A work session is when you work for at most sessionTime consecutive hours and then take a break.
 
 You should finish the given tasks in a way that satisfies the following conditions:
 
@@ -34,6 +35,14 @@ Input: tasks = [1,2,3,4,5], sessionTime = 15
 Output: 1
 Explanation: You can finish all the tasks in one work session.
  
+ 
+ Constraints:
+
+n == tasks.length
+1 <= n <= 14
+1 <= tasks[i] <= 10
+max(tasks[i]) <= sessionTime <= 15
+
 */
 //sol
 class Solution {
