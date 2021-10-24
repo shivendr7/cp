@@ -43,6 +43,8 @@ public class Solution {
         }
         return false;
     }
+ 
+    // finding square root with binary Search
     public boolean binary_search(long s, long e, int n) {
         if (s > e)
             return false;
