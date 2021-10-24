@@ -1,3 +1,5 @@
+Bitmasks: https://codeforces.com/blog/entry/18169
+
 good 4type of dp use:
 https://leetcode.com/problems/k-inverse-pairs-array/solution/
 
