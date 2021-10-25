@@ -1,6 +1,6 @@
 /*
 https://practice.geeksforgeeks.org/problems/6b216f3d1f1ce9a14258b982d44f5e5199e7759a/1
-https://leetcode.com/problems/parallel-courses-iii/
+https://github.com/shivendr7/cp/blob/main/leetcode/GraphsTopologyAlgoMinTimeToCompleteCourses.py
 
 An IT company is working on a large project. The project is broken into N modules and distributed to different teams. The amount of time (in months) required to complete each module is given in an array duration[ ]. Two modules can be processed simultaneously only if their is no dependency between them and it is given that M modules have interdependecies. 
 As the project manager, compute the minimum time required to complete the project.
