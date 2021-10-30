@@ -1,7 +1,8 @@
 /*
-link-https://practice.geeksforgeeks.org/problems/number-of-paths-in-a-matrix-with-k-coins2728/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=3&query=category[]Dynamic%20Programmingdifficulty[]1page3category[]Dynamic%20Programming#
+link-https://practice.geeksforgeeks.org/problems/number-of-paths-in-a-matrix-with-k-coins2728/1/
 
-Given a N x N matrix such that each of its cells contains some coins. Count the number of ways to collect exactly K coins while moving from top left corner of the matrix to the bottom right. From a cell (i, j), you can only move to (i+1, j) or (i, j+1).
+Given a N x N matrix such that each of its cells contains some coins. Count the number of ways to collect exactly K coins while moving from top left
+corner of the matrix to the bottom right. From a cell (i, j), you can only move to (i+1, j) or (i, j+1).
 
 Example 1:
 
