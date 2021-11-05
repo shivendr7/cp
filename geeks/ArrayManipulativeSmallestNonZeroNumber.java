@@ -29,7 +29,8 @@ next 4, it becomes 1
  
 
 Your Task:
-This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function find() that takes array A and integer N as parameters and returns the smallest possible number.
+This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function find() 
+that takes array A and integer N as parameters and returns the smallest possible number.
 
  
 
