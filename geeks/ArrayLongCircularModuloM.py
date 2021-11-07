@@ -21,13 +21,18 @@ n,k,m=map(int,input().split())
 ans=[0]*m
 if(n<m):
     for i in range(n+1):
-       ans[(i*k)%m]+=1
+        ans[(i*k)%m]+=1
     print(ans)
 else:
+    #taking m steps
     for i in range(m):
-      ans[(i*k)%m]+=1
+        ans[(i*k)%m]+=1
+        
+    #taking n//m steps
     for i in range(m):
         ans[i]=ans[i]*(n//m)
+        
+    #taking n%m steps
     for i in range((n%m)+1):
         ans[(i*k)%m]+=1
     print(ans)
