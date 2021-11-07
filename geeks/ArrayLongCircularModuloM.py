@@ -28,7 +28,7 @@ else:
     for i in range(m):
         ans[(i*k)%m]+=1
         
-    #taking n//m steps
+    #repeating m steps
     for i in range(m):
         ans[i]=ans[i]*(n//m)
         
