@@ -71,112 +71,71 @@ class Solution:
         return ans
 
     
-    """
-    https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/
-    
-    Given a string word, return the sum of the number of vowels ('a', 'e', 'i', 'o', and 'u') in every substring of word.
+"""
+https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/
 
-A substring is a contiguous (non-empty) sequence of characters within a string.
+You are given an integer n indicating there are n specialty retail stores. There are m product types of varying amounts, which are given as a 0-indexed integer array quantities, where quantities[i] represents the number of products of the ith product type.
 
-Note: Due to the large constraints, the answer may not fit in a signed 32-bit integer. Please be careful during the calculations.
+You need to distribute all products to the retail stores following these rules:
+
+A store can only be given at most one product type but can be given any amount of it.
+After distribution, each store will be given some number of products (possibly 0). Let x represent the maximum number of products given to any store. You want x to be as small as possible, i.e., you want to minimize the maximum number of products that are given to any store.
+Return the minimum possible x.
 
  
 
 Example 1:
 
-Input: word = "aba"
-Output: 6
-Explanation: 
-All possible substrings are: "a", "ab", "aba", "b", "ba", and "a".
-- "b" has 0 vowels in it
-- "a", "ab", "ba", and "a" have 1 vowel each
-- "aba" has 2 vowels in it
-Hence, the total sum of vowels = 0 + 1 + 1 + 1 + 1 + 2 = 6. 
+Input: n = 6, quantities = [11,6]
+Output: 3
+Explanation: One optimal way is:
+- The 11 products of type 0 are distributed to the first four stores in these amounts: 2, 3, 3, 3
+- The 6 products of type 1 are distributed to the other two stores in these amounts: 3, 3
+The maximum number of products given to any store is max(2, 3, 3, 3, 3, 3) = 3.
 Example 2:
 
-Input: word = "abc"
-Output: 3
-Explanation: 
-All possible substrings are: "a", "ab", "abc", "b", "bc", and "c".
-- "a", "ab", and "abc" have 1 vowel each
-- "b", "bc", and "c" have 0 vowels each
-Hence, the total sum of vowels = 1 + 1 + 1 + 0 + 0 + 0 = 3. 
+Input: n = 7, quantities = [15,10,10]
+Output: 5
+Explanation: One optimal way is:
+- The 15 products of type 0 are distributed to the first three stores in these amounts: 5, 5, 5
+- The 10 products of type 1 are distributed to the next two stores in these amounts: 5, 5
+- The 10 products of type 2 are distributed to the last two stores in these amounts: 5, 5
+The maximum number of products given to any store is max(5, 5, 5, 5, 5, 5, 5) = 5.
 Example 3:
 
-Input: word = "ltcd"
-Output: 0
-Explanation: There are no vowels in any substring of "ltcd".
-Example 4:
-
-Input: word = "noosabasboosa"
-Output: 237
-Explanation: There are a total of 237 vowels in all the substrings.
+Input: n = 1, quantities = [100000]
+Output: 100000
+Explanation: The only optimal way is:
+- The 100000 products of type 0 are distributed to the only store.
+The maximum number of products given to any store is max(100000) = 100000.
  
 
 Constraints:
 
-1 <= word.length <= 105
-word consists of lowercase English letters.
-
-    """
-    #sol
-    class Solution:
-    def countVowels(self, word: str) -> int:
-        n=len(word)
-        ans=0
-        for i in range(0, n):
-            s = word[i]
-            if s in 'aeiou':
-                ans += ((n - i) * (i + 1))           
-
-        return ans
-    
-    """
-    https://www.geeksforgeeks.org/count-of-substrings-consisting-of-even-number-of-vowels/
-    
-    Given a string S of length N, the task is to find the number of non-empty substrings having even number of vowels.
-    
-    Input: N = 5, S = “abcde”
-Output: 7
-Explanation: 
-All possible substrings with even number of vowels are:
-Substring              Vowels
-{abcde}                     2
-{b}                            0
-{bc}                          0
-{bcd}                        0
-{c}                            0
-{cd}                          0
-{d}                           0
-Input: N=4, S=”geeks”
-Output: 6
-
-
-    """
-    #sol
-    
-def countSubstrings(s, n):
-     
-    # Stores the count of substrings
-    # with even and odd number of
-    # vowels respectively
-    temp = [1, 0];
- 
-    result = 0;
-    sum = 0;
-    for i in range(0, n):
-         
-        # Update count of vowels modulo 2
-        # in sum to obtain even or odd
-        sum += (1 if isVowel(s[i]) else 0);
-        sum %= 2;
- 
-        # Increment even/odd count
-        temp[sum] += 1;
- 
-    # Count substrings with even number
-    # of vowels using Handshaking Lemma
-    result += ((temp[0] * (temp[0] - 1)) // 2);
-    result += ((temp[1] * (temp[1] - 1)) // 2);
- 
-    print(result);
+m == quantities.length
+1 <= m <= n <= 105
+1 <= quantities[i] <= 105
+"""
+#sol
+class Solution:
+    def minimizedMaximum(self, n: int, q: List[int]) -> int:
+        hi=max(q)
+        lo=0
+        while lo<hi:
+            m=(hi+lo)>>1
+            
+            if m==0:
+                return hi
+            
+            #counting shops
+            c=0
+            for i in q:
+                c+=i//m + (1 if i%m>0 else 0)
+                
+            #lower bound
+            if c<=n:
+                hi=m
+            else:
+                lo=m+1 
+            
+        return lo
