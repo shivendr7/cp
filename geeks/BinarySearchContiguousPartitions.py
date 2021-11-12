@@ -2,9 +2,11 @@
 https://practice.geeksforgeeks.org/problems/the-painters-partition-problem1535/1#
 https://www.youtube.com/watch?v=2JSQIhPcHQg
 
-Dilpreet wants to paint his dog's home that has n boards with different lengths. The length of ith board is given by arr[i] where arr[] is an array of n integers. He hired k painters for this work and each painter takes 1 unit time to paint 1 unit of the board. 
+Dilpreet wants to paint his dog's home that has n boards with different lengths. The length of ith board is given by arr[i] where arr[] is an array of n integers.
+He hired k painters for this work and each painter takes 1 unit time to paint 1 unit of the board. 
 
-The problem is to find the minimum time to get this job done if all painters start together with the constraint that any painter will only paint continuous boards, say boards numbered {2,3,4} or only board {1} or nothing but not boards {2,4,5}.
+The problem is to find the minimum time to get this job done if all painters start together with the constraint that any painter will only paint continuous boards,
+say boards numbered {2,3,4} or only board {1} or nothing but not boards {2,4,5}.
 
 
 Example 1:
@@ -74,12 +76,14 @@ class Solution:
 """
 https://leetcode.com/problems/minimized-maximum-of-products-distributed-to-any-store/
 
-You are given an integer n indicating there are n specialty retail stores. There are m product types of varying amounts, which are given as a 0-indexed integer array quantities, where quantities[i] represents the number of products of the ith product type.
+You are given an integer n indicating there are n specialty retail stores. There are m product types of varying amounts, which are given as a 0-indexed integer array
+quantities, where quantities[i] represents the number of products of the ith product type.
 
 You need to distribute all products to the retail stores following these rules:
 
 A store can only be given at most one product type but can be given any amount of it.
-After distribution, each store will be given some number of products (possibly 0). Let x represent the maximum number of products given to any store. You want x to be as small as possible, i.e., you want to minimize the maximum number of products that are given to any store.
+After distribution, each store will be given some number of products (possibly 0). Let x represent the maximum number of products given to any store. You want x to be
+as small as possible, i.e., you want to minimize the maximum number of products that are given to any store.
 Return the minimum possible x.
 
  
