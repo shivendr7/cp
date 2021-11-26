@@ -2,7 +2,8 @@
 https://practice.geeksforgeeks.org/problems/largest-divisibility-test3444/1/
 Must see- Comments in question and "http://www.savory.de/maths1.htm"
 
-Babul’s favourite number is 17. He likes the numbers which are divisible by 17. This time what he does is that he takes a number n and tries to find the largest number which is divisible by 17, by rearranging the digits. As the number increases he gets puzzled with his own task. So you as a programmer have to help him to accomplish his task.
+Babul’s favourite number is 17. He likes the numbers which are divisible by 17. This time what he does is that he takes a number n and tries to find the largest number
+which is divisible by 17, by rearranging the digits. As the number increases he gets puzzled with his own task. So you as a programmer have to help him to accomplish his task.
 
 Note: If the number is not divisible by rearranging the digits, then return “Not Possible”. n may have leading zeros.
 
