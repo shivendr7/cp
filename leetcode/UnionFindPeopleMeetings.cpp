@@ -62,4 +62,4 @@ xi != yi
 
 
 */
-//sol
+//sol https://leetcode.com/problems/find-all-people-with-secret/discuss/1599828/Java-Intuitive-Solution
