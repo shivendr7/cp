@@ -1,7 +1,8 @@
 /*
 link-https://practice.geeksforgeeks.org/problems/-rearrange-array-alternately-1587115620/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=1&query=category[]Arraysdifficulty[]1page1category[]Arrays
 
-Given a sorted array of positive integers. Your task is to rearrange  the array elements alternatively i.e first element should be max value, second should be min value, third should be second max, fourth should be second min and so on.
+Given a sorted array of positive integers. Your task is to rearrange  the array elements alternatively i.e first element should be max value, second should be min value,
+third should be second max, fourth should be second min and so on.
 
 Example 1:
 
