@@ -1,6 +1,7 @@
 /*
 link-https://practice.geeksforgeeks.org/problems/maximum-product-subarray3604/1/?category[]=Dynamic%20Programming&category[]=Dynamic%20Programming&difficulty[]=1&page=2&query=category[]Dynamic%20Programmingdifficulty[]1page2category[]Dynamic%20Programming#
 
+https://leetcode.com/problems/maximum-product-subarray/
 
 
 Given an array Arr that contains N integers (may be positive, negative or zero). Find the product of the maximum product subarray.
@@ -53,3 +54,28 @@ class Solution {
         return M;
     } 
 }
+
+/*
+
+Intuition
+Seem to be a problem of 2014.
+Is it too late to write one in 2018?
+
+
+Explanation
+Calculate prefix product in A.
+Calculate suffix product in A.
+Return the max.
+
+    
+*/
+
+    public int maxProduct(int[] A) {
+        int n = A.length, res = A[0], l = 0, r = 0;
+        for (int i = 0; i < n; i++) {
+            l =  (l == 0 ? 1 : l) * A[i];
+            r =  (r == 0 ? 1 : r) * A[n - 1 - i];
+            res = Math.max(res, Math.max(l, r));
+        }
+        return res;
+    }
