@@ -33,6 +33,37 @@ Constraints:
 1 ≤ N ≤ 500
 -102 ≤ Arri ≤ 102
 */
+
+/*
+
+
+https://www.quora.com/How-do-I-solve-maximum-product-subarray-problems
+Use an example: [2,-3,4,-8,0]
+Insights:
+What if the array has just positive numbers including zero?
+A solution of this will maintain max_prod[i] where max_prod[i] is the maximum subarray product ending at i. Then max_prod[i+1] = max(max_prod[i] * nums[i+1], nums[i+1]).
+Now how do we change the solution when we allow negative numbers?
+Imagine that we have both max_prod[i] and min_prod[i] i.e. max prod ending at i and min prod ending at i. Now if we have a negative number at nums[i+1] and if min_prod[i] is negative, then the product of the two will be positive and can potentially be largest product. Key point is to maintain both max_prod and min_prod such that at iteration i, they refer to the max and min prod ending at index i -1.
+You have three choices to make at any position in array.
+
+  1.You can get maximum product by multiplying the current element with
+    maximum product calculated so far. (might work when current
+    element is positive).
+  2.You can get maximum product by multiplying the current element with
+    minimum product calculated so far. (might work when current
+    element is negative).
+  3.Current element might be a starting position for maximum product sub
+    array
+    
+        max_prod, min_prod, ans = nums[0], nums[0], nums[0]
+        for i in range(1, len(nums)):
+            x = max(nums[i], max_prod*nums[i], min_prod*nums[i])
+            y = min(nums[i], max_prod*nums[i], min_prod*nums[i])            
+            max_prod, min_prod = x, y
+            ans = max(max_prod, ans)
+        return ans
+*/
+
 //sol
 class Solution {
     // Function to find maximum product subarray
