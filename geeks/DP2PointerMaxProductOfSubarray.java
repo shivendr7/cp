@@ -56,6 +56,7 @@ class Solution {
 }
 
 /*
+https://leetcode.com/problems/maximum-product-subarray/discuss/183483/JavaC%2B%2BPython-it-can-be-more-simple
 
 Intuition
 Seem to be a problem of 2014.
