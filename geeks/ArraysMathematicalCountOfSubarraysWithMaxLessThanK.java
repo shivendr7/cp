@@ -1,7 +1,8 @@
 /*
 link-https://practice.geeksforgeeks.org/problems/count-of-subarrays5922/1/?track=sp-2-8&batchId=299#
 
-Given an array of N positive integers  Arr1, Arr2 ............ Arrn. The value of each contiguous subarray of given array is the maximum element present in that subarray. The task is to return the number of subarrays having value strictly greater than K.
+Given an array of N positive integers  Arr1, Arr2 ............ Arrn. The value of each contiguous subarray of given array is the maximum element present in that subarray.
+The task is to return the number of subarrays having value strictly greater than K.
 
 Example 1:
 
