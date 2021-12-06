@@ -86,3 +86,67 @@ class Solution {
         return Math.max(num1, num2);
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/kth-smallest-number-in-multiplication-table/1
+
+Given three integers M, N and K. Consider a grid of M * N, where mat[i][j] = i * j (1 based index). The task is to return the Kth smallest element in the M * N multiplication table.
+ 
+
+Example 1:
+
+Input:
+M = 3, N = 3
+K = 5
+Output: 3
+Explanation: 
+
+The 5th smallest element is 6. 
+
+
+Example 2:
+
+Input:
+M = 2, N = 3
+K = 6
+Output: 6 
+
+ 
+
+Your Task:  
+You don't need to read input or print anything. Your task is to complete the function KthSmallest() which takes three integers as input and returns an integer as output.
+
+Expected Time Complexity: O(M * log(M * N))
+Expected Auxiliary Space: O(1)
+
+ 
+
+Constraints:
+1 <= M, N <= 3 * 104
+1 <= K <= M * N
+*/
+//sol
+class Solution {
+    public int KthSmallest(int m, int n, int k) {
+        //Write your code here 
+        int lo=1;
+        int hi=m*n;
+        int ans=0;
+        while(hi>lo) {
+            int mid=(hi+lo)>>1;
+            
+            int c=0;
+            for(int i=1;i<=m;i++) {
+                c+=Math.min(mid/i, n);
+            }
+            
+            if(c<k) {
+                lo=mid+1;
+            }
+            else {
+                hi=mid;
+            }
+        }
+        return lo;
+    }
+}
