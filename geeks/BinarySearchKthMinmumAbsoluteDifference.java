@@ -1,7 +1,8 @@
 /*
 https://practice.geeksforgeeks.org/problems/smallest-absolute-difference4320/1/
 
-Given an array of size N containing positive integers n and a number k,The absolute difference between values at indices i and j is |a[i] – a[j]|. There are n*(n-1)/2 such pairs and you have to print the kth smallest absolute difference among all these pairs.
+Given an array of size N containing positive integers n and a number k,The absolute difference between values at indices i and j is |a[i] – a[j]|. 
+There are n*(n-1)/2 such pairs and you have to print the kth smallest absolute difference among all these pairs.
  
 
 Example 1:
