@@ -1,6 +1,8 @@
 /*
 https://practice.geeksforgeeks.org/problems/divisibility3832/1/
 
+similar: https://leetcode.com/problems/nth-magical-number/
+
 Given an array nums[] of n elements and a number k. Your task is to count the number of integers from 1 to k which are divisible by atleast one of the elements of nums[].
  
 
