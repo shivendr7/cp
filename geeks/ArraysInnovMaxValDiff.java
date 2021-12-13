@@ -67,3 +67,7 @@ class Solution {
         return(Math.max(d1,d2));
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/max-sum-in-sub-arrays0824/1/
+*/
