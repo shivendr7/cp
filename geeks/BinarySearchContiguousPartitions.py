@@ -1,4 +1,69 @@
 """
+https://practice.geeksforgeeks.org/problems/equalize-the-towers2804/1/
+
+Given heights h[] of N towers, the task is to bring every tower to the same height by either adding or removing blocks in a tower. Every addition or removal operation costs cost[] a particular value for the respective tower. Find out the Minimum cost to Equalize the Towers.
+
+Example 1:
+
+Input: N = 3, h[] = {1, 2, 3} 
+cost[] = {10, 100, 1000}
+Output: 120
+Explanation: The heights can be equalized 
+by either "Removing one block from 3 and 
+adding one in 1" or "Adding two blocks in 
+1 and adding one in 2". Since the cost 
+of operation in tower 3 is 1000, the first 
+process would yield 1010 while the second 
+one yields 120. Since the second process 
+yields the lowest cost of operation, it is 
+the required output.
+ 
+
+Example 2:
+
+Input: N = 5, h[] = {9, 12, 18, 3, 10} 
+cost[] = {100, 110, 150, 25, 99}
+Output: 1623 
+ 
+
+Your Task:
+This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function Bsearch() that takes integer N, array H, and array Cost as parameters and returns the minimum cost required to equalize the towers.
+
+ 
+
+Expected Time Complexity: O(NlogN). 
+Expected Auxiliary Space: O(1).
+
+Constraints:
+1 ≤ N ≤ 106
+"""
+#sol
+class Solution:
+    def findCost(self, h, cost, x):
+        s=0
+        for i in range(len(h)):
+            s+=abs(h[i]-x)*cost[i]
+        return s
+        
+    def Bsearch(self, n, h, cost):
+        # Your code goes here
+        lo=min(h)
+        hi=max(h)
+        while lo<=hi:
+            m=(lo+hi)>>1
+            cur=self.findCost(h, cost, m)
+            nxt=self.findCost(h, cost, m+1)
+            prv=self.findCost(h, cost, m-1)
+            if cur==min(prv, nxt, cur):
+                return cur
+            elif cur<nxt:
+                hi=m-1
+            elif cur<prv:
+                lo=m+1
+        return -1 
+
+
+"""
 https://practice.geeksforgeeks.org/problems/the-painters-partition-problem1535/1#
 https://www.youtube.com/watch?v=2JSQIhPcHQg
 
