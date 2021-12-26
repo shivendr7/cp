@@ -100,3 +100,75 @@ class GfG {
         
     }
 }
+
+/*
+https://practice.geeksforgeeks.org/problems/find-the-largest-rectangle-of-1s-with-swapping-of-columns-allowed0243/1
+
+Given a matrix mat of size R*C with 0 and 1’s, find the largest rectangle of all 1’s in the matrix. The rectangle can be formed by swapping any pair of columns of given matrix.
+
+Example 1:
+
+Input: 
+R = 3, C = 5
+mat[][] = {{0, 1, 0, 1, 0},
+           {0, 1, 0, 1, 1},
+           {1, 1, 0, 1, 0}};
+Output: 6
+Explanation: The largest rectangle's area
+is 6. The rectangle can be formed by
+swapping column  2 with 3. The matrix
+after swapping will be
+     0 0 1 1 0
+     0 0 1 1 1
+     1 0 1 1 0
+Example 2:
+
+Input:
+R = 4, C = 5
+mat[][] = {{0, 1, 0, 1, 0},
+           {0, 1, 1, 1, 1},
+           {1, 1, 1, 0, 1},
+           {1, 1, 1, 1, 1}};
+Output: 9
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function maxArea() which takes the 2D array of booleans mat, r and c as parameters and returns an integer denoting the answer.
+
+Expected Time Complexity: O(R*(R + C))
+Expected Auxiliary Space: O(R*C)
+
+Constraints:
+1<= R,C <=103
+0 <= mat[i][j] <= 1
+*/
+//sol
+class Solution {
+    
+    int maxArea(boolean[][] mat, int r, int c) {
+        int bar[][] = new int[r][c];
+        for(int i=0; i<r ; i++ ){
+            for(int j=0;j<c;j++){
+                bar[i][j] = (mat[i][j]== true)? 1:0;
+                if( i > 0){
+                    if(bar[i][j] != 0 ){
+                        bar[i][j] += bar[i-1][j];
+                    }
+                }
+            }
+        }
+        int ans = 0;
+        for(int []a:bar){
+            ans = Math.max(ans, getMaxArea(a, c));
+        }
+        return ans;
+    }
+    
+    int getMaxArea( int []a, int n ){
+        // since we can swap any columns
+        Arrays.sort(a);
+        int ans = 0;
+        for(int i=0; i< n ; i++ ){
+            ans= Math.max(ans, (a[i] * (n-i))  );
+        }    
+        return ans;
+    }
+}
