@@ -1,4 +1,87 @@
 /*
+https://practice.geeksforgeeks.org/problems/count-odd-factors0844/1/
+
+Given an integer N, count the numbers having an odd number of factors from 1 to N (inclusive).
+ 
+
+Example 1:
+
+Input:
+N = 5
+Output:
+2
+Explanation:
+From 1 - 5 only 2 numbers,
+1 and 4 are having odd number
+of factors.
+Example 2:
+
+Input:
+N = 1
+Output:
+1
+Explanation:
+1 have only 1(odd)
+factor
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function count() which takes an integer N as input parameters and returns an integer, the total count of numbers from 1 to N having an odd number of factors.
+ 
+
+Expected Time Complexity: O(sqrt(N))
+Expected Space Complexity: O(1)
+ 
+
+Constraints:
+0 <= N <= 109
+*/
+//sol
+class Solution {
+ long count(int N) { 
+  return (long)Math.pow(N, 0.5);
+ }
+}
+
+
+/*
+https://practice.geeksforgeeks.org/problems/maximum-sum-difference2545/1/
+
+Given a number N. We have to find maximum sum of all permutations of numbers from 1 to N. The maximum sum will be sum of absolute difference of adjacent elements in array.
+
+Example 1:
+
+Input: N = 2
+Output: 1
+Explaination: Permutations of 2 are: 
+{1, 2} = 1, {2, 1} = 1.
+Example 2:
+
+Input: N = 3
+Output: 3
+Explaintation: Permutations of size 3 are: 
+{1, 2, 3} = 1 + 1, {1, 3, 2} = 2 + 1 
+{2, 1, 3} = 1 + 2, {2, 3, 1} = 1 + 2 
+{3, 1, 2} = 2 + 1, {3, 2, 1} = 1 + 1 
+Your Task:
+You do not need to read input or print anything. Your task is to complete the function maxSum() which takes N as input parameter and returns the maximum possible difference sum from all permutations of N numbers.
+
+Expected Time Complexity: O(1)
+Expected Auxiliary Space: O(1)
+
+Constraints:
+2 ≤ N ≤ 1000
+
+*/
+//sol
+class Solution{
+    static int maxSum(int N){
+        // code here 
+        if(N==1) return 1;
+        return N*N/2-1; //or   N*(N-1)/2-1+N/2;
+    }
+}
+
+/*
 https://practice.geeksforgeeks.org/problems/divisible-numbers1521/1/
 
 Given two integers A and B. Find the smallest number X (greater than A) which is divisible by B.
