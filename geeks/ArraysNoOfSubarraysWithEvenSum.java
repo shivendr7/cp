@@ -82,3 +82,65 @@ class Solution {
         return res;
     }
 }
+
+
+/*
+https://practice.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1/
+
+You are given an array A of N positive and/or negative integers and a value K. The task is to find the count of all sub-arrays whose sum is divisible by K.
+
+Example 1:
+
+Input: N = 6, K = 5
+       arr[] = {4, 5, 0, -2, -3, 1}
+Output: 7
+Explanation: There are 7 sub-arrays whose 
+is divisible by K {4, 5, 0, -2, -3, 1}, {5}, 
+{5, 0}, {5, 0, -2, -3}, {0}, {0, -2, -3} 
+and {-2, -3}
+Example 2:
+
+Input: N = 6, K = 2
+       arr[] = {2, 2, 2, 2, 2, 2}
+Output: 21
+Explanation: All subarray sums are 
+divisible by 7
+
+ 
+
+Your Task:
+This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function subCount() that takes array arr, integer N, and integer K as parameters and returns the desired output.
+
+Expected Time Complexity: O(N+K).
+Expected Auxiliary Space: O(K).
+
+ 
+
+Constraints:
+2 ≤ N ≤ 105
+*/
+//sol
+class Solution
+{
+    long subCount(long arr[], int n, int k)
+    {
+        HashMap<Integer, Integer> map=new HashMap<>();
+        map.put(0, 1);
+        int cs=0, rem=0, ans=0;
+        for(int i=0; i<n; i++) {
+            cs += arr[i];
+            rem=cs%k;
+            if(rem<0) {
+                rem+=k;
+            }
+            if(map.get(rem)!=null) {
+                ans+=map.get(rem);
+                map.put(rem, map.get(rem)+1);
+            }
+            else {
+                map.put(rem, 1);
+            }
+        }
+        return ans;
+    }
+}
