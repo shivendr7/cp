@@ -1,6 +1,6 @@
 /*
-https://practice.geeksforgeeks.org/problems/count-the-number-of-subarrays/
-1
+https://practice.geeksforgeeks.org/problems/count-the-number-of-subarrays/1
+
 
 Given an array A[] of N integers and a range(L, R). The task is to find the number of subarrays having sum in the range L to R (inclusive).
 
