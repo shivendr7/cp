@@ -91,3 +91,68 @@ class Solution
         
     }
 }
+
+
+/*
+https://practice.geeksforgeeks.org/problems/two-numbers-with-odd-occurrences5846/1/
+
+Given an unsorted array, arr[] of size N and that contains even number of occurrences for all numbers except two numbers. Find the two numbers in decreasing order which has odd occurrences.
+
+Example 1:
+
+Input:
+N = 8
+Arr = {4, 2, 4, 5, 2, 3, 3, 1}
+Output: {5, 1} 
+Explaination: 5 and 1 have odd occurrences.
+
+Example 2:
+
+Input:
+N = 6
+Arr = {1 7 5 5 4 4}
+Output: {7, 1}
+Explaination: 7 and 1 have odd occurrences.
+
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function twoOddNum() which takes the array Arr[] and its size N as input parameters and returns the two numbers in decreasing order which have odd occurrences.
+
+
+Expected Time Complexity: O(N)
+Expected Auxiliary Space: O(1)
+
+
+Constraints:
+1 ≤ N ≤ 105
+1 ≤ Arri ≤ 108
+
+
+
+*/
+class Solution{
+    public:
+    vector<int> twoOddNum(int Arr[], int N)  
+    {
+        // code here
+         int Xor = 0, res1 = 0, res2 = 0;
+       
+       for(int i = 0; i < N; i++)
+          Xor ^= Arr[i];
+       
+       int r_most_setBit = Xor & (~(Xor-1));      //to get rightmost set-bit 
+       
+       for(int i = 0; i < N; i++)
+       {
+           if((r_most_setBit & Arr[i]) != 0)      // group1 = corresponding bit as 1
+              res1 = res1 ^ Arr[i];
+           else                                        // group2 = corresponding bit as 0
+              res2 = res2 ^ Arr[i];
+       }
+       
+       if(res1 > res2)
+          return {res1, res2};
+       else
+          return {res2, res1};
+
+    }
+};
