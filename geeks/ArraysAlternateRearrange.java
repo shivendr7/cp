@@ -1,4 +1,15 @@
 /*
+Similar Logical: https://leetcode.com/problems/rotate-array/
+Given an array, rotate the array to the right by k steps, where k is non-negative. Could you do it in-place with O(1) extra space?
+
+sol:
+Reverse the whole array.
+Then reverse the first k elements.
+Finally reverse the remaining elements.
+(Do a dry run, it's very easy to understand)
+*/
+
+/*
 link-https://practice.geeksforgeeks.org/problems/-rearrange-array-alternately-1587115620/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=1&query=category[]Arraysdifficulty[]1page1category[]Arrays
 
 Given a sorted array of positive integers. Your task is to rearrange  the array elements alternatively i.e first element should be max value, second should be min value,
