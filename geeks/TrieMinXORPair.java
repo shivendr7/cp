@@ -101,3 +101,126 @@ class Solution{
         return min;
     }
 }
+
+/*
+Trie design 
+https://practice.geeksforgeeks.org/problems/shortest-unique-prefix-for-every-word/1
+
+Given an array of words, find all shortest unique prefixes to represent each word in the given array. Assume that no word is prefix of another.
+
+Example 1:
+
+Input: 
+N = 4
+arr[] = {"zebra", "dog", "duck", "dove"}
+Output: z dog du dov
+Explanation: 
+z => zebra 
+dog => dog 
+duck => du 
+dove => dov 
+Example 2:
+
+Input: 
+N = 3
+arr[] =  {"geeksgeeks", "geeksquiz",
+                       "geeksforgeeks"};
+Output: geeksg geeksq geeksf
+Explanation: 
+geeksgeeks => geeksg 
+geeksquiz => geeksq 
+geeksforgeeks => geeksf
+Your task:
+You don't have to read input or print anything. Your task is to complete the function findPrefixes() which takes the array of strings and it's size N as input and returns a list of shortest unique prefix for each word
+ 
+Expected Time Complexity: O(N*length of each word)
+Expected Auxiliary Space: O(N*length of each word)
+ 
+Constraints:
+1 ≤ N, Length of each word ≤ 1000
+*/
+class TrieNode {
+    private TrieNode[] links;
+    private final int R = 26;
+    private boolean isEnd;
+    private int countChar;
+    
+    public TrieNode() {
+        links = new TrieNode[R];
+    }
+    
+    public boolean containsKey(char ch) {
+        return links[ch - 'a'] != null;
+    }
+    
+    public TrieNode get(char ch) {
+        return links[ch - 'a'];
+    }
+    
+    public void put(char ch, TrieNode node) {
+        links[ch - 'a'] = node;
+    }
+    
+    public void setCounter() {
+        countChar++;
+    }
+    
+    public int getCounter() {
+        return countChar;
+    }
+    
+    public void setEnd() {
+        isEnd = true;
+    }
+    
+    public boolean isEnd() {
+        return isEnd;
+    }
+}
+
+class Solution {
+    private static TrieNode root;
+    
+    static String[] findPrefixes(String[] arr, int N) {
+        // code here
+        root = new TrieNode();
+        
+        for (String word: arr) {
+            addWord(word);
+        }
+        
+        for (int i = 0 ; i < arr.length ; i++) {
+            TrieNode node = root;
+            
+            int n = arr[i].length();
+            for (int j = 0 ; j < n ; j++) {
+                char currentChar = arr[i].charAt(j);
+                node = node.get(currentChar);
+                if (node.getCounter() == 1) {
+                    arr[i] = arr[i].substring(0, j+1);
+                    break;
+                }
+            }
+        }
+        
+        return arr;
+    }
+    
+    private static void addWord(String word) {
+        TrieNode node = root;
+        int n = word.length();
+        
+        for (int i = 0 ; i < n ; i++) {
+            char currentChar = word.charAt(i);
+            if (!node.containsKey(currentChar)) {
+                node.put(currentChar, new TrieNode());
+            }
+            node = node.get(currentChar);
+            node.setCounter();
+        }
+        
+        node.setEnd();
+        return;
+    } 
+};
+
