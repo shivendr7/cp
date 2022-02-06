@@ -1,3 +1,6 @@
+// a more vaiation(leetcode, hard, contest, min time toremoval of illegal goods) : link below
+// https://github.com/shivendr7/cp/blob/main/leetcode/DPKedaneVariationMinTimeRemovalOfIllegalGoods.py
+
 /*
 You are given array A of size n. You need to find the maximum-sum sub-array with the condition that you are allowed to skip at most one element.
 
