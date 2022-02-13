@@ -17,7 +17,8 @@ based indexing.
  
 
 Your Task:
-You don't need to read input or print anything. Complete the function longestCommonSum() which takes two arrays arr1, arr2 and integer n as input parameters and returns the length of the longest common span.
+You don't need to read input or print anything. Complete the function longestCommonSum() which takes two arrays arr1, arr2 and integer n as input parameters and returns
+the length of the longest common span.
 
  
 
