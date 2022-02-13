@@ -34,7 +34,8 @@ BST of size 2:
     /    \ 
    N      8
 Your Task:
-You don't need to read input or print anything. Your task is to complete the function largestBst() that takes the root node of the Binary Tree as its input and returns the size of the largest subtree which is also the BST. If the complete Binary Tree is a BST, return the size of the complete Binary Tree. 
+You don't need to read input or print anything. Your task is to complete the function largestBst() that takes the root node of the Binary Tree as its input and returns
+the size of the largest subtree which is also the BST. If the complete Binary Tree is a BST, return the size of the complete Binary Tree. 
 
 Expected Time Complexity: O(N).
 Expected Auxiliary Space: O(Height of the BST).
