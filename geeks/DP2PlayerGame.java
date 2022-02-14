@@ -1,7 +1,8 @@
 /*
 https://practice.geeksforgeeks.org/problems/geek-and-its-game-of-coins4043/1/
 
-Given three numbers N, X, and Y. Geek and his friend playing a coin game. At the beginning, there are N coins. In each move, a player can pick X, Y, or 1 coin. Geek always starts the game. The player who picks the last coin wins the game. The task is to check whether Geek will win the game or not if both are playing optimally.
+Given three numbers N, X, and Y. Geek and his friend playing a coin game. At the beginning, there are N coins. In each move, a player can pick X, Y, or 1 coin.
+Geek always starts the game. The player who picks the last coin wins the game. The task is to check whether Geek will win the game or not if both are playing optimally.
 
 Example 1:
 
