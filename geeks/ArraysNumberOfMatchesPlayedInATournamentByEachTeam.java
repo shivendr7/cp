@@ -3,7 +3,10 @@ https://practice.geeksforgeeks.org/problems/number-of-matches1120/1/
 
 hint: see editorial
 
-A knockout tournament is going on. A total of N number of players are participating. Each match will have two players. Every player has a distinct rating associated with him. The player with the more rating wins in a match. In one round, the 1st player will play a match against 2nd player, 3rd player will play a match against 4th player and so on. If there is odd number of players, last one will qualify to the next round without playing a match. Since it is a knockout tournament, whoever loses a match leaves the tournament. Rating of each player is unique.
+A knockout tournament is going on. A total of N number of players are participating. Each match will have two players. Every player has a distinct rating associated with him.
+The player with the more rating wins in a match. In one round, the 1st player will play a match against 2nd player, 3rd player will play a match against 4th player and so on.
+If there is odd number of players, last one will qualify to the next round without playing a match. Since it is a knockout tournament, whoever loses a match leaves the
+tournament. Rating of each player is unique.
 
 Your task is to find out the number of matches each player wins in the tournament. The tournament ends when there is only one player remaining in the end.
 
@@ -43,7 +46,8 @@ A[] = {8, 4, 3, 5, 2, 6}
 Output:
 3 1 1 2 1 2 
 Your Task:  
-You don't need to read input or print anything. Your task is to complete the function getAnswer() which takes the array A[] and its size N as inputs and stores the number of wins of each player in the answer[] array.
+You don't need to read input or print anything. Your task is to complete the function getAnswer() which takes the array A[] and its size N as inputs and stores the number of
+wins of each player in the answer[] array.
 
  
 
