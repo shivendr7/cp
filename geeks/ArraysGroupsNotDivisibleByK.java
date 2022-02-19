@@ -1,7 +1,8 @@
 /*
-link-https://practice.geeksforgeeks.org/problems/grouping-of-numbers0015/0/?category[]=Mathematical&category[]=Mathematical&difficulty[]=1&page=1&query=category[]Mathematicaldifficulty[]1page1category[]Mathematical#
+link-https://practice.geeksforgeeks.org/problems/grouping-of-numbers0015/0/
 
-One day Jim came across array arr[] of N numbers. He decided to divide these N numbers into different groups. Each group contains numbers in which sum of any two numbers should not be divisible by an integer K. Print the size of the group containing maximum numbers.
+One day Jim came across array arr[] of N numbers. He decided to divide these N numbers into different groups. Each group contains numbers in which sum of any two numbers
+should not be divisible by an integer K. Print the size of the group containing maximum numbers.
 
  
 
