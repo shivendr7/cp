@@ -1,7 +1,8 @@
 """
 https://practice.geeksforgeeks.org/problems/equalize-the-towers2804/1/
 
-Given heights h[] of N towers, the task is to bring every tower to the same height by either adding or removing blocks in a tower. Every addition or removal operation costs cost[] a particular value for the respective tower. Find out the Minimum cost to Equalize the Towers.
+Given heights h[] of N towers, the task is to bring every tower to the same height by either adding or removing blocks in a tower. Every addition or removal operation 
+costs cost[] a particular value for the respective tower. Find out the Minimum cost to Equalize the Towers.
 
 Example 1:
 
@@ -27,7 +28,8 @@ Output: 1623
  
 
 Your Task:
-This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function Bsearch() that takes integer N, array H, and array Cost as parameters and returns the minimum cost required to equalize the towers.
+This is a function problem. You don't need to take any input, as it is already accomplished by the driver code. You just need to complete the function Bsearch() that takes
+integer N, array H, and array Cost as parameters and returns the minimum cost required to equalize the towers.
 
  
 
