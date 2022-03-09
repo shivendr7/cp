@@ -1,7 +1,8 @@
 /*
 https://practice.geeksforgeeks.org/problems/minimum-steps-to-delete-a-string2956/1/
 
-Given string s containing characters as integers only, the task is to delete all characters of this string in a minimum number of steps wherein one step you can delete the substring which is a palindrome. After deleting a substring remaining parts are concatenated.
+Given string s containing characters as integers only, the task is to delete all characters of this string in a minimum number of steps wherein
+one step you can delete the substring which is a palindrome. After deleting a substring remaining parts are concatenated.
 
 Example 1:
 
