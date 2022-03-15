@@ -1,5 +1,5 @@
 /*
-link-https://practice.geeksforgeeks.org/problems/sum-of-xor-of-all-pairs0723/1/?category[]=Arrays&category[]=Arrays&difficulty[]=1&page=2&query=category[]Arraysdifficulty[]1page2category[]Arrays#
+link-https://practice.geeksforgeeks.org/problems/sum-of-xor-of-all-pairs0723/1/
 
 Given an array of N integers, find the sum of xor of all pairs of numbers in the array.
 
