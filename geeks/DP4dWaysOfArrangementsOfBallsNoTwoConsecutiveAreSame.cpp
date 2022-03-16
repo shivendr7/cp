@@ -60,3 +60,61 @@ long long int CountWays(int p, int q, int r) {
 	}
 };
 
+
+/*
+https://practice.geeksforgeeks.org/problems/geek-and-its-colored-strings1355/1/
+
+Find the count of all possible strings of size n.Each character of the string is either ‘R’, ‘B’ or ‘G’. In the final string there needs to be at least r number of ‘R’, at least b number of ‘B’ and at least g number of ‘G’ (such that r + g + b <= n). 
+
+Example 1:
+
+Input: n = 4, r = 1, g = 1, b = 1
+Output: 36 
+Explanation: No. of 'R' >= 1, 
+No. of ‘G’ >= 1, No. of ‘B’ >= 1 
+and (No. of ‘R’) + (No. of ‘B’) 
++ (No. of ‘G’) = n then 
+following cases are possible: 
+1. RBGR and its 12 permutation 
+2. RBGB and its 12 permutation 
+3. RBGG and its 12 permutation 
+Hence answer is 36.
+Example 2:
+
+Input: n = 4, r = 2, g = 0, b = 1
+Output: 22
+Explanation: No. of 'R' >= 2,
+No. of ‘G’ >= 0, No. of ‘B’ >= 1
+and (No. of ‘R’) + (No. of ‘B’)
++ (No. of ‘G’) <= n then 
+following cases are possible:
+1. RRBR and its 4 permutation
+2. RRBG and its 12 permutation
+3. RRBB and its 6 permutation
+Hence answer is 22.
+
+Your Task:  
+You dont need to read input or print anything. Complete the function possibleStrings() which takes n, r, g, b as input parameter and returns the count of number of all possible strings..
+
+Expected Time Complexity: O(n2)
+Expected Auxiliary Space: O(n)
+
+Constraints:
+1<= n <=20
+1<= r+b+g <=n
+*/
+//sol
+class Solution:
+    def possibleStrings(ob, n, r, b, g):
+        # code here 
+        fact = [0 for i in range(n+1)]
+        fact[0]=1
+        for i in range (1,n+1,1):
+            fact[i]=fact[i-1]*i
+        left = n-(r+g+b)
+        sum=0
+        for i in range(0, left + 1, 1):
+            for j in range(0, left - i + 1, 1):
+                k = left - (i + j)
+                sum = (sum + fact[n] // (fact[i + r] * fact[j + b] * fact[k + g]))
+        return sum
