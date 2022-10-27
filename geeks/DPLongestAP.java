@@ -1,4 +1,7 @@
 /*
+https://leetcode.com/problems/longest-arithmetic-subsequence/
+
+
 Given an array called set[] of sorted integers having no duplicates, find the length of the Longest Arithmetic Progression (LLAP) in it.
 
 Example 1:
@@ -84,3 +87,14 @@ class Solution {
         }
         return llap;
     }
+
+/*    
+The main idea is to maintain a map of differences seen at each index.
+
+We iteratively build the map for a new index i, by considering all elements to the left one-by-one.
+For each pair of indices (i,j) and difference d = A[i]-A[j] considered, we check if there was an existing chain at the index j with difference d already.
+
+If yes, we can then extend the existing chain length by 1.
+Else, if not, then we can start a new chain of length 2 with this new difference d and (A[j], A[i]) as its elements.
+At the end, we can then return the maximum chain length that we have seen so far.
+*/
