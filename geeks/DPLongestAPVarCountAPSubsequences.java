@@ -1,4 +1,6 @@
 /*
+
+https://leetcode.com/problems/arithmetic-slices-ii-subsequence/discuss/92822/Detailed-explanation-for-Java-O(n2)-solution
 link-https://practice.geeksforgeeks.org/problems/count-of-ap-subsequences0016/1/
 
 Given an array A of N positive integers. The task is to count the number of Arithmetic Progression subsequence in the array.
