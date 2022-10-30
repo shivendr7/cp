@@ -57,6 +57,8 @@ class Sol
         return root;
         
     }
+ 
+    // mine
     public void traverse(Node root) {
         if(root!=null) {
             traverse(root.left);
@@ -70,5 +72,18 @@ class Sol
             p=root;
             traverse(root.right);
         }
+    }
+ 
+    // simple
+    public void trav(Node root) {
+     if (root != null) {
+      trav(root.left);
+      if (p != null and p.data>root.data) {
+       if (fix1 == null) 
+        fix1 = p;
+       fix2 = root;
+      }
+      p = root;
+      trav(root.right);
     }
 }
