@@ -1,2 +1,5 @@
 https://www.hackerrank.com/challenges/leonardo-and-prime/problem?isFullScreen=true
 
+Jump Search 
+https://leetcode.com/problems/online-stock-span/description/
+
