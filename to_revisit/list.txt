@@ -5,3 +5,5 @@ https://leetcode.com/problems/online-stock-span/description/
 
 Goldbach Conjecture (python soln)
 https://practice.geeksforgeeks.org/problems/primes-sum5827/1 
+
+2dps: https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings/description/
