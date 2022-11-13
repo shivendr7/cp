@@ -3,3 +3,5 @@ https://www.hackerrank.com/challenges/leonardo-and-prime/problem?isFullScreen=tr
 Jump Search 
 https://leetcode.com/problems/online-stock-span/description/
 
+Goldbach Conjecture (python soln)
+https://practice.geeksforgeeks.org/problems/primes-sum5827/1 
