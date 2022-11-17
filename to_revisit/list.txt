@@ -11,3 +11,5 @@ https://practice.geeksforgeeks.org/problems/primes-sum5827/1
 
 https://cses.fi/problemset/
 These problems are hard. Really hard for anyone who hasn’t practiced algorithms and is not beginner friendly. But if you are able to complete the sorting and searching section, you will be more capable than the average LeetCode user and be more than ready for your coding interview.
+
+https://levelup.gitconnected.com/how-i-got-in-to-amazon-microsoft-google-all-from-studying-these-resources-31724508ce0e
