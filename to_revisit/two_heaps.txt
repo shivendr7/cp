@@ -1,0 +1,13 @@
+IPO: https://leetcode.com/problems/ipo/description/
+question and strategy(Q&S): https://www.educative.io/courses/grokking-coding-interview-patterns-java/7AW7xlVYvJO
+
+
+Median of Sliding window: https://leetcode.com/problems/sliding-window-median/description/
+Q&S : https://www.educative.io/courses/grokking-coding-interview-patterns-java/B6YX6vy3Q4x
+
+Median of a data stream: https://leetcode.com/problems/find-median-from-data-stream/description/
+Q&S: https://www.educative.io/courses/grokking-coding-interview-patterns-java/R8v2Nk5RVzY#Examples
+
+Task Scheduler: 
+Q&S : https://www.educative.io/courses/grokking-coding-interview-patterns-java/N8vABXZZNBp
+
