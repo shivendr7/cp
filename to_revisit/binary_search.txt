@@ -1,0 +1,5 @@
+search in sorted and rotated array : https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+Q&S: https://www.educative.io/courses/grokking-coding-interview-patterns-java/N0J0qzNQ1X2
+youtube xplaination: https://www.youtube.com/watch?v=Le8bc8aHgBA
+
+
