@@ -19,7 +19,7 @@ class Solution
          int mid = (lo + hi)>>1;
          if (nums.get(mid) == target) 
             return mid;
-         if (nums.get(lo) < nums.get(mid)) { // left sorted
+         if (nums.get(lo) <= nums.get(mid)) { // left sorted
             if (nums.get(lo) <= target && nums.get(mid) > target) { // in range and mid > target
                hi = mid-1;
             } else {
