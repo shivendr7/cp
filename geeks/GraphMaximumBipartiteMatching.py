@@ -1,6 +1,6 @@
-// https://practice.geeksforgeeks.org/problems/9a88fe7ada1c49c2b3da7a67b43875e4a76aface/1
+# https://practice.geeksforgeeks.org/problems/9a88fe7ada1c49c2b3da7a67b43875e4a76aface/1
 
-/*
+"""
 There are M job applicants and N jobs.  Each applicant has a subset of jobs that he/she is interested in. Each job opening can only accept one applicant and a job applicant can be appointed for only one job. Given a matrix G with M rows and N columns where G(i,j) denotes ith applicant is interested in the jth job. Find the maximum number of applicants who can get the job.
 
 Example 1:
@@ -36,9 +36,9 @@ Expected Auxiliary Space: O(N).
 
 Constraints:
 1 ≤ N, M ≤ 100
-*/
+"""
 
-//sol
+#sol
 class Solution:
 	def maximumMatch(self, G):
 		matched = [-1]*len(G[0])
