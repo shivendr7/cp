@@ -5,7 +5,8 @@ There are two types of persons:
 
 The good person: The person who always tells the truth.
 The bad person: The person who might tell the truth and might lie.
-You are given a 0-indexed 2D integer array statements of size n x n that represents the statements made by n people about each other. More specifically, statements[i][j] could be one of the following:
+You are given a 0-indexed 2D integer array statements of size n x n that represents the statements made by n people about each other. 
+More specifically, statements[i][j] could be one of the following:
 
 0 which represents a statement made by person i that person j is a bad person.
 1 which represents a statement made by person i that person j is a good person.
