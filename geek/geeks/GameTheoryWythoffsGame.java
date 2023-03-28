@@ -22,7 +22,8 @@ Input:
 A = 1 and B = 3
 Output: Dolly
 Your Task:  
-You don't need to read input or print anything. Your task is to complete the function solve() which takes the integer A and B as input parameters and returns false if Bunty should play first else returns true.
+You don't need to read input or print anything. Your task is to complete the function solve() which takes the integer A and B as input parameters 
+and returns false if Bunty should play first else returns true.
 
 Expected Time Complexity: O(1)
 Expected Auxiliary Space: O(1)
