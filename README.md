@@ -1,5 +1,8 @@
 # cp
 
+## Master the art of problem solving: 
+https://www.enjoyalgorithms.com/blog/tips-and-motivation-to-master-problem-solving
+
 https://cp-algorithms.com/
 
 https://www.educative.io/courses/grokking-dynamic-programming-patterns-for-coding-interviews
