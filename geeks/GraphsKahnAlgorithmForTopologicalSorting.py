@@ -1,4 +1,19 @@
 """
+
+Topological sorting is an algorithm for ordering a directed graph such that for each directed edge uv, vertex u comes before vertex v in the ordering.
+Topological sorting is often used to find a linear ordering of tasks in a workflow, where each task has a set of prerequisites that must be completed
+before the task can be started.
+
+There are two main topological sorting algorithms:
+
+Kahn's algorithm is a simple algorithm that works by repeatedly removing nodes from the graph that have no incoming edges.
+Tarjan's algorithm is a more complex algorithm that works by recursively exploring the graph and marking visited nodes.
+Kahn's algorithm is generally faster than Tarjan's algorithm, but Tarjan's algorithm can handle graphs with cycles, while Kahn's algorithm cannot.
+
+Here is an example of how to use Kahn's algorithm to topologically sort a graph:
+"""
+
+"""
 https://practice.geeksforgeeks.org/problems/course-schedule/1/
 https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
 
