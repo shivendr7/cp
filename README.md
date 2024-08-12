@@ -1,5 +1,8 @@
 # cp
 
+### Geometry
+https://www.geeksforgeeks.org/problems/integral-points-in-triangle5026/1
+
 ## Master the art of problem solving: 
 https://www.enjoyalgorithms.com/blog/tips-and-motivation-to-master-problem-solving
 
